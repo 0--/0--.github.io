@@ -8298,20 +8298,16 @@ label {
 .wufoo textarea.textarea {
   resize: none;
   min-height: 132px;
+  padding: 6px 12px 6px 84px;
+}
+.wufoo input.text[type="email"] {
+  padding: 6px 12px 6px 117px;
 }
 
 .wufoo input.text:focus,
 .wufoo textarea.textarea:focus {
   border-color: #333;
   outline: 0;
-}
-
-.wufoo input.text[type="email"] {
-  padding: 6px 12px 6px 117px;
-}
-
-.wufoo textarea.textarea {
-  padding: 6px 12px 6px 84px;
 }
 
 .wufoo *:focus {
