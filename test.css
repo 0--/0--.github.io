@@ -8334,3 +8334,19 @@ form p.error {
   padding: 0;
   color: inherit !important;
 }
+
+#saveForm,
+input.btTxt,
+input.submit {
+  color: #fff;
+  background-color: #555555;
+  border-color: #4b494f;
+}
+
+#saveForm:hover,
+input.btTxt:hover,
+input.submit:hover {
+  color: #fff;
+  background-color: #626262;
+  border-color: #58555c;
+}
