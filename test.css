@@ -8270,13 +8270,16 @@ label {
 .rightLabel .desc{
   width: 15%;
   z-index: 100;
-  position: relative;
-  left: 18.5%;
-  top: 8px
+  position: absolute;
+  left: 19%;
+  top: 17px;
+  white-space: nowrap;
 }
 
 .wufoo input.text,
 .wufoo textarea.textarea {
+  position: relative;
+  left: 15%;
   display: block;
   width: 100%;
   padding: 6px 12px;
