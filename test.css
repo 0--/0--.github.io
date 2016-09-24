@@ -8266,10 +8266,9 @@ label {
   text-align: left;
 }
 
-.wufoo .leftLabel .desc {
-  float: left;
+.leftLabel .desc,
+.rightLabel .desc{
   width: 15%;
-  margin: 0 15px 0 0;
   z-index: 100;
   position: relative;
   left: 18%;
