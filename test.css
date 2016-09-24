@@ -8297,7 +8297,7 @@ label {
 }
 .wufoo textarea.textarea {
   resize: none;
-  min-height: 132px;
+  min-height: 180px;
   padding: 6px 12px 6px 84px;
 }
 .wufoo input.text[type="email"] {
