@@ -8266,6 +8266,9 @@ label {
   text-align: left;
 }
 
+.leftLabel li div, .rightLabel li div {
+  width: 66%;
+}
 .leftLabel .desc,
 .rightLabel .desc{
   width: 15%;
@@ -8346,7 +8349,7 @@ input.submit {
   outline: none !important;
   padding: 6px 36px;
   position: absolute;
-  right: 17%;
+  right: 16%;
 }
 
 #saveForm:hover,
