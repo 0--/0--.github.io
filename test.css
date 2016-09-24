@@ -8290,11 +8290,14 @@ label {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: none;
   
   -moz-transition: border 0.5s;
   -webkit-transition: border 0.5s;
   transition: border 0.5s;
+}
+.wufoo textarea.textarea {
+  resize: none;
+  min-height: 132px;
 }
 
 .wufoo input.text:focus,
