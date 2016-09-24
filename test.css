@@ -8268,7 +8268,7 @@ label {
 
 .leftLabel li div, 
 .rightLabel li div {
-  width: 66%;
+  width: 67%;
   min-height: 27px;
 }
 .leftLabel .desc,
@@ -8351,7 +8351,7 @@ input.submit {
   outline: none !important;
   padding: 6px 36px;
   position: absolute;
-  right: 17%;
+  right: 16%;
 }
 
 #saveForm:hover,
