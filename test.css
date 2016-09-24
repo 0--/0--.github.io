@@ -8279,7 +8279,7 @@ label {
 .wufoo input.text,
 .wufoo textarea.textarea {
   position: relative;
-  left: 15%;
+  left: 26%;
   display: block;
   width: 100%;
   padding: 6px 12px;
@@ -8317,4 +8317,9 @@ label {
 
 form li.error {
   background-color: transparent !important;
+}
+
+form p.error {
+  position: relative;
+  left: 26%;
 }
