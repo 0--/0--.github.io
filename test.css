@@ -8341,12 +8341,13 @@ input.submit {
   color: #fff;
   background-color: #555555;
   border-color: #4b494f;
+  border-width: 0 0 2px !important;
+  outline: none !important;
 }
 
 #saveForm:hover,
 input.btTxt:hover,
 input.submit:hover {
-  color: #fff;
   background-color: #626262;
   border-color: #58555c;
 }
