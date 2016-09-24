@@ -8321,5 +8321,14 @@ form li.error {
 
 form p.error {
   position: relative;
-  left: 26%;
+  left: 18.5%;
+}
+
+#errorLi, .error-container {
+  border: 0;
+}
+
+#errorMsg b {
+  background-color: transparent !important;
+  font-weight: normal;
 }
