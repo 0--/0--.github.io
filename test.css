@@ -8266,8 +8266,10 @@ label {
   text-align: left;
 }
 
-.leftLabel li div, .rightLabel li div {
+.leftLabel li div, 
+.rightLabel li div {
   width: 66%;
+  min-height: 27px;
 }
 .leftLabel .desc,
 .rightLabel .desc{
