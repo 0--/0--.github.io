@@ -8304,13 +8304,17 @@ label {
 }
 
 .wufoo input.text[type="email"] {
-  padding: 6px 12px 6px 114px;
+  padding: 6px 12px 6px 117px;
 }
 
 .wufoo textarea.textarea {
-  padding: 6px 12px 6px 81px;
+  padding: 6px 12px 6px 84px;
 }
 
 .wufoo *:focus {
  outline: 0; 
+}
+
+form li.error {
+  background-color: transparent !important;
 }
