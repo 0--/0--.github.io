@@ -8259,8 +8259,8 @@ label {
   font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.wufoo field.textarea,
-.wufoo field.input {
+.wufoo input.text,
+.wufoo textarea.textarea {
   display: block;
   width: 100%;
   padding: 6px 12px;
