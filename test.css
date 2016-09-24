@@ -8331,4 +8331,6 @@ form p.error {
 #errorMsg b {
   background-color: transparent !important;
   font-weight: normal;
+  padding: 0;
+  color: inherit !important;
 }
