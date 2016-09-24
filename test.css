@@ -8345,6 +8345,8 @@ input.submit {
   border-width: 0 0 2px !important;
   outline: none !important;
   padding: 6px 36px;
+  position: absolute;
+  right: 17%;
 }
 
 #saveForm:hover,
