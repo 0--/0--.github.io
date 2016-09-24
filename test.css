@@ -8256,11 +8256,11 @@ label {
 }
 
 .wufoo {
-  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.wufoo textarea,
-.wufoo input {
+.wufoo field.textarea,
+.wufoo field.input {
   display: block;
   width: 100%;
   padding: 6px 12px;
