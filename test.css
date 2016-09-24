@@ -8261,7 +8261,19 @@ label {
 
 .wufoo label.desc,
 .wufoo legend.desc {
+  font-weight: normal;
   color: #999;
+  text-align: left;
+}
+
+.wufoo .leftLabel .desc {
+  float: left;
+  width: 15%;
+  margin: 0 15px 0 0;
+  z-index: 100;
+  position: relative;
+  left: 18%;
+  top: 8px
 }
 
 .wufoo input.text,
