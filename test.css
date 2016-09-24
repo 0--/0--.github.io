@@ -8340,12 +8340,12 @@ input.btTxt,
 input.submit {
   color: #fff;
   background-color: #555555;
-  border-color: #4b494f;
+  border-color: #58555c;
   border-radius: 4px;
   font-size: 14px;
   border-width: 0 0 2px !important;
   outline: none !important;
-  padding: 6px 24px;
+  padding: 6px 36px;
 }
 
 #saveForm:hover,
