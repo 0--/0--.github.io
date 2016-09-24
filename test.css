@@ -8272,7 +8272,7 @@ label {
   z-index: 100;
   position: relative;
   left: 18%;
-  top: 8px
+  top: 4px
 }
 
 .wufoo input.text,
@@ -8298,6 +8298,14 @@ label {
 .wufoo textarea.textarea:focus {
   border-color: #333;
   outline: 0;
+}
+
+.wufoo input.text[type="email"] {
+  padding: 6px 12px 6px 108px;
+}
+
+.wufoo textarea.textarea {
+  padding: 6px 12px 6px 75px;
 }
 
 .wufoo *:focus {
