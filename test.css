@@ -8255,6 +8255,7 @@ label {
   display: none;
 }
 
+//* Contact Form
 .wufoo {
   font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -8266,13 +8267,13 @@ label {
   text-align: left;
 }
 
-.leftLabel li div, 
-.rightLabel li div {
+.wufoo.leftLabel li div, 
+.wufoo.rightLabel li div {
   width: 66%;
   min-height: 27px;
 }
-.leftLabel .desc,
-.rightLabel .desc{
+.wufoo.leftLabel .desc,
+.wufoo.rightLabel .desc{
   width: 15%;
   z-index: 100;
   position: absolute;
@@ -8319,29 +8320,29 @@ label {
  outline: 0; 
 }
 
-form li.error {
+.wufoo li.error {
   background-color: transparent !important;
 }
 
-form p.error {
+.wufoo p.error {
   position: relative;
   left: 18.5%;
 }
 
-#errorLi, .error-container {
+.wufoo #errorLi, .error-container {
   border: 0;
 }
 
-#errorMsg b {
+.wufoo #errorMsg b {
   background-color: transparent !important;
   font-weight: normal;
   padding: 0;
   color: inherit !important;
 }
 
-#saveForm,
-input.btTxt,
-input.submit {
+.wufoo #saveForm,
+.wufoo input.btTxt,
+.wufoo input.submit {
   color: #fff;
   background-color: #555555;
   border-color: #58555c;
@@ -8354,9 +8355,9 @@ input.submit {
   right: 17%;
 }
 
-#saveForm:hover,
-input.btTxt:hover,
-input.submit:hover {
+.wufoo #saveForm:hover,
+.wufoo input.btTxt:hover,
+.wufoo input.submit:hover {
   background-color: #626262;
   border-color: #58555c;
 }
