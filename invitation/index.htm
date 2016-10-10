@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Summit at Sea 2016</title>
+<link href="/_css/site.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png" href="/_images/_common/favicon.png">
+<meta name="description" content="Summit at Sea: Gathering today's leaders in business and culture.">
+<meta property="og:type" content="product" />
+<meta property="og:url" content="http://sas.summit.co/" />
+<meta property="og:title" content="Summit at Sea 2016" />
+<meta property="og:image" content="http://sas.summit.co/_images/_facebook/og_logo.jpg" />
+<meta property="og:description" content="Summit at Sea: Gathering today's leaders in business and culture." />
+
+<script LANGUAGE="JavaScript" src="/_js/jquery-1.4.4.min.js"></script>
+<script>
+function lightbox_contact_show()
+{
+	$("#lightbox-contact-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-contact-overlay").css("display", "block");
+	$("#lightbox-contact-overlay").css("width", $(document).width());
+	$("#lightbox-contact-overlay").css("height", $(document).height() + 100);
+}
+
+function lightbox_contact_hide()
+{
+	$("#lightbox-contact-overlay").css("display", "none");
+}
+
+function lightbox_contact_select(tab)
+{
+	$("#lightbox-contact-general-tab-on").css("display", "none");
+	$("#lightbox-contact-general-tab-off").css("display", "block");
+	$("#lightbox-contact-general-instructions").css("display", "none");
+	$("#lightbox-contact-nominate-tab-on").css("display", "none");
+	$("#lightbox-contact-nominate-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-tab-on").css("display", "none");
+	$("#lightbox-contact-sponsorship-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-instructions").css("display", "none");
+	$("#lightbox-contact-press-tab-on").css("display", "none");
+	$("#lightbox-contact-press-tab-off").css("display", "block");
+	$("#lightbox-contact-press-instructions").css("display", "none");
+
+	$("#lightbox-contact-form").css("display", "none");
+	$("#lightbox-contact-nominate-form").css("display", "none");
+
+	if (tab == "nominate")
+	{
+		$("#lightbox-contact-nominate-tab-on").css("display", "block");
+		$("#lightbox-contact-nominate-tab-off").css("display", "none");
+		$("#lightbox-contact-nominate-form").css("display", "block");
+	}
+	else
+	{
+		$("#lightbox-contact-" + tab + "-tab-on").css("display", "block");
+		$("#lightbox-contact-" + tab + "-tab-off").css("display", "none");
+		$("#lightbox-contact-" + tab + "-instructions").css("display", "block");
+		document.getElementById("lightbox-contact-type").value = tab;
+		$("#lightbox-contact-form").css("display", "block");
+	}
+}
+
+function lightbox_contact_submit(type)
+{
+	if (type == "nominate")
+	{
+		var values = $("#lightbox-contact-nominate-form").serialize();
+	}
+	else
+	{
+		var values = $("#lightbox-contact-form").serialize();
+	}
+	$.ajax({
+		url: "/contact/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! We'll be in touch soon.");
+				document.getElementById("lightbox-contact-form").reset();
+				document.getElementById("lightbox-contact-nominate-form").reset();
+				lightbox_contact_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_changeemail_show(user)
+{
+	$("#lightbox-changeemail-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-changeemail-overlay").css("display", "block");
+	$("#lightbox-changeemail-overlay").css("width", $(document).width());
+	$("#lightbox-changeemail-overlay").css("height", $(document).height() + 100);
+	$("#lightbox-changeemail-form-email").val(user);
+}
+
+function lightbox_changeemail_hide()
+{
+	$("#lightbox-changeemail-overlay").css("display", "none");
+}
+
+function lightbox_changeemail_submit()
+{
+	var values = $("#lightbox-changeemail-form").serialize();
+	$.ajax({
+		url: "/change-email/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! Your request has been sent.");
+				document.getElementById("lightbox-changeemail-form").reset();
+				lightbox_changeemail_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_refundpolicy_show()
+{
+	$("#lightbox-refundpolicy-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-refundpolicy-overlay").css("display", "block");
+	$("#lightbox-refundpolicy-overlay").css("width", $(document).width());
+	$("#lightbox-refundpolicy-overlay").css("height", $(document).height());
+}
+
+function lightbox_refundpolicy_hide()
+{
+	$("#lightbox-refundpolicy-overlay").css("display", "none");
+}
+</script>
+
+<link rel="stylesheet" href="/_css/mllnnl.css">
+</head>
+<body style="background:url(/_images/_common/bg3a.jpg) center -0px no-repeat; background-attachment:fixed;">
+
+<!-- Contact Us Lightbox -->
+<div id="lightbox-contact-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(152, 208, 231, 0.7); display:none;">
+<div id="lightbox-contact-panel" style="margin:0px auto 20px auto; width:1000px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">CONTACT US</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_contact_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin-top:10px;">
+<tr style="vertical-align:top;">
+<td>
+    <div id="lightbox-contact-general-tab-on" style="width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px;">GENERAL INQUIRIES</div>
+    <div id="lightbox-contact-general-tab-off" style="width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px; display:none;"><a href="javascript:lightbox_contact_select('general')" style="color:inherit; text-decoration:none;">GENERAL INQUIRIES</a></div>
+    <div id="lightbox-contact-nominate-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">NOMINATE AN ATTENDEE</div>
+    <div id="lightbox-contact-nominate-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('nominate')" style="color:inherit; text-decoration:none;">NOMINATE AN ATTENDEE</a></div>
+    <div id="lightbox-contact-sponsorship-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">SPONSORSHIP</div>
+    <div id="lightbox-contact-sponsorship-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('sponsorship')" style="color:inherit; text-decoration:none;">SPONSORSHIP</a></div>
+    <div id="lightbox-contact-press-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">PRESS & MEDIA</div>
+    <div id="lightbox-contact-press-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('press')" style="color:inherit; text-decoration:none;">PRESS & MEDIA</a></div>
+    </td>
+<td style="width:100%;">
+    <form method=POST id="lightbox-contact-form">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div id="lightbox-contact-general-instructions" style="text-align:center; font-size:20px; letter-spacing:1px;">For more information about Summit.</div>
+    <div id="lightbox-contact-sponsorship-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">For more information about strategic ways to partner.</div>
+    <div id="lightbox-contact-press-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">Interested in Covering Summit at Sea?<br>Please fill out this form.</div>
+
+    <div style="margin:40px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">FIRST NAME</div>
+        <div><input type=text name="first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">LAST NAME</div>
+        <div><input type=text name="last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">COMPANY</div>
+    <div><input type=text name="company" value="" style="width:660px;"></div>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">TITLE</div>
+        <div><input type=text name="title" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">PHONE</div>
+    <div><input type=text name="phone" value="" style="width:320px;"></div>
+    <div class="label-top" style="margin-top:25px;">ADDITIONAL INFORMATION</div>
+    <div><textarea name="comments" style="width:660px; height:220px;"></textarea></div>
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('')"><img src="/_images/contact/button_submit.png"></a></div>
+    <input type=hidden id="lightbox-contact-type" name="contact_type" value="general">
+    </form>
+
+    <form method=POST id="lightbox-contact-nominate-form" style="display:none;">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div style="margin:0px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">YOUR FIRST NAME</div>
+        <div><input type=text name="first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">YOUR LAST NAME</div>
+        <div><input type=text name="last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">YOUR EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL OF YOUR SUMMIT COMMUNITY TEAM CONTACT</div>
+        <div><input type=text name="curator_email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div style="margin-top:25px; border-top:1px solid #000000;"></div>
+
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS FIRST NAME</div>
+        <div><input type=text name="nominee_first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS LAST NAME</div>
+        <div><input type=text name="nominee_last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS EMAIL</div>
+        <div><input type=text name="nominee_email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS ORGANIZATION</div>
+        <div><input type=text name="nominee_organization" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS TITLE</div>
+        <div><input type=text name="nominee_title" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS PHONE NUMBER</div>
+        <div><input type=text name="nominee_phone" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div class="label-top" style="margin-top:25px;">WHY DO YOU FEEL THIS PERSON IS A GOOD FIT FOR SUMMIT AT SEA?</div>
+    <div><textarea name="nominee_description" style="width:660px; height:200px;"></textarea></div>
+    <div class="label-top" style="margin-top:25px;">LINK TO RECENT PRESS ABOUT THIS PERSON</div>
+    <div><textarea name="nominee_press" style="width:660px; height:100px;"></textarea></div>
+
+    <input type=hidden name="contact_type" value="nominate">
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('nominate')"><img src="/_images/contact/button_submit.png"></a></div>
+    </form>
+    </td>
+</tr>
+</table>
+</div>
+</div>
+<!-- /Contact Us Lightbox -->
+
+<!-- Change Email Lightbox -->
+<div id="lightbox-changeemail-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div id="lightbox-changeemail-panel" style="margin:0px auto 20px auto; width:800px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">REQUEST FOR EMAIL CHANGE</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_changeemail_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<form method=POST id="lightbox-changeemail-form" onSubmit="return false;">
+    <div style="margin:10px auto 0px auto; border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+
+    <div style="text-align:center; font-size:20px; letter-spacing:1px;">Please let us know what you'd like to change your email address to:</div>
+    <div style="margin:20px auto 0px auto; display:table;">
+    <div class="label-top">NEW EMAIL</div>
+    <div><input type=text name="email" value="" style="width:660px;"></div>
+    </div>
+    <div style="margin-top:20px; text-align:center; font-size:20px; letter-spacing:1px;">Please allow us time to update our system. Thanks!</div>
+
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_changeemail_submit()"><img src="/_images/changeemail/button_submit.png"></a></div>
+    <input type=hidden name="user" id="lightbox-changeemail-form-email" value="">
+</form>
+</div>
+</div>
+<!-- /Change Email Lightbox -->
+
+<!-- Refund Lightbox -->
+<div id="lightbox-refundpolicy-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div id="lightbox-refundpolicy-panel" style="margin:0px auto 20px auto; width:800px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+    <tr style="vertical-align:top;">
+    <td><div style="width:40px; height:40px;"></div></td>
+    <td><div class="page-title" style="font-family:roice-regularregular; letter-spacing:normal;">Refund Policy</div></td>
+    <td style="padding-top:16px;"><a href="javascript:lightbox_refundpolicy_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="width:40px; height:40px; float:right;"></div></td>
+    </tr>
+    </table>
+
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:25px 25px 25px 25px;">
+    <p>Any attendee who has purchased a ticket to Summit at Sea and is unable to attend due to any reason including but not limited to a personal matter, scheduling conflict, or force majeur must inform Summit Series via email by the following dates:</p>
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">1.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to January 1, 2016 shall be refunded 100% of the cost of ticket sale less registration processing fee.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">2.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to March 1, 2016 shall be refunded 75% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">3.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to May 1, 2016 shall be refunded 50% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">4.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to July 1, 2016 shall be refunded 25% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">5.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed on or after July 1, 2016 shall not be refunded.</td>
+    </tr>
+    </table>
+    <p style="margin-top:10px;">Registrations are non-transferable.</p>
+    <p style="margin-top:10px;">To notify Summit Series of a cancellation, please email <a href="mailto:cancellations@summitseries.com">cancellations@summitseries.com</a>.</p>
+    </div>
+</div>
+</div>
+<!-- /Refund PolicyLightbox -->
+
+<div style="margin:16px auto 0px auto; width:1000px;">
+</div>
+
+<div style="margin:0px auto 0px auto; width:1000px;">
+<div style="margin:20px auto 30px auto; display:table;"><a href="/"><img src="/_images/_common/title3a.png"></a></div>
+</div>
+
+<div style="margin:0px auto 0px auto; width:1000px;">
+<form method=POST name="mainform">
+
+<div style="margin-top:40px;">
+
+    <div style="margin:0px auto 0px auto; width:243px; border-top:5px solid #99f7ff;"></div>
+    <div style="margin-top:36px; text-align:center; font-size:20px; letter-spacing:1px;">Hi Blake TEST 3! Please login to continue.<br><br>If you can't remember your password, you can <a href="/invitation/reset-password.htm?VmX7aqQY66ENt7ez41ZsziBDMA85FpYC">update it here</a>.</div>
+    <div style="margin:34px auto 0px auto; width:243px; border-top:5px solid #99f7ff;"></div>
+
+
+    <div style="margin:45px auto 0px auto; display:table;">
+    <div class="label-top">EMAIL</div>
+    <div><input type=text name="email" value="" style="width:320px;"></div>
+    <div class="label-top" style="margin-top:20px;">PASSWORD</div>
+    <div><input type=password name="password" value="" style="width:320px;"></div>
+    </div>
+
+    <div style="margin:50px auto 0px auto; display:table;"><input type=submit name="CONTINUE" value=" " onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';" style="width:208px; height:98px; padding:0px; border:0px; background:url(/_images/login/button_login.png);"></div>
+<div class="font2" style="margin-top:40px; text-align:center;"><a href="/invitation/reset-password.htm?VmX7aqQY66ENt7ez41ZsziBDMA85FpYC">UPDATE PASSWORD</a></div>
+
+<input type=hidden name="k" value="VmX7aqQY66ENt7ez41ZsziBDMA85FpYC">
+</form>
+</div>
+
+<div style="margin:120px 0px 10px 0px; text-align:center;">2016 &copy; The Summit Series, LLC &nbsp;&bull;&nbsp; <a href="/terms/">Terms of Service</a></div>
+
+
+<!-- Start of ReTargeter Tag -->
+<script type="text/javascript" src="https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/json3.js"></script>
+<script type="text/javascript">
+    if( typeof _rt_cgi == "undefined" ){
+    var _rt_cgi = 1248;
+    var _rt_base_url = "https://lt.retargeter.com/";
+    var _rt_js_base_url = "https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/";
+    var _rt_init_src = _rt_js_base_url+"init_super_tag.js";
+    var _rt_refresh_st = false;
+    var _rt_record = function(params){if(typeof document.getElementsByTagName("_rt_data")[0]=="undefined"){setTimeout(function(){_rt_record(params);},25);}};
+    (function() {var scr = document.createElement("script");scr.src = _rt_init_src;document.getElementsByTagName("head")[0].appendChild(scr);})();}
+    </script>
+<!-- End of ReTargeter Tag -->
+</body>
+</html>

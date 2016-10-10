@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Summit at Sea 2016</title>
+<link href="/_css/site.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png" href="/_images/_common/favicon.png">
+<meta name="description" content="Summit at Sea: Gathering today's leaders in business and culture.">
+<meta property="og:type" content="product" />
+<meta property="og:url" content="http://sas.summit.co/" />
+<meta property="og:title" content="Summit at Sea 2016" />
+<meta property="og:image" content="http://sas.summit.co/_images/_facebook/og_logo.jpg" />
+<meta property="og:description" content="Summit at Sea: Gathering today's leaders in business and culture." />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<script LANGUAGE="JavaScript" src="/_js/jquery-1.4.4.min.js"></script>
+<script>
+function lightbox_contact_show()
+{
+	$("#lightbox-contact-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-contact-overlay").css("display", "block");
+	$("#lightbox-contact-overlay").css("width", $(document).width());
+	$("#lightbox-contact-overlay").css("height", $(document).height() + 100);
+}
+
+function lightbox_contact_hide()
+{
+	$("#lightbox-contact-overlay").css("display", "none");
+}
+
+function lightbox_contact_select(tab)
+{
+	$("#lightbox-contact-general-tab-on").css("display", "none");
+	$("#lightbox-contact-general-tab-off").css("display", "block");
+	$("#lightbox-contact-general-instructions").css("display", "none");
+	$("#lightbox-contact-nominate-tab-on").css("display", "none");
+	$("#lightbox-contact-nominate-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-tab-on").css("display", "none");
+	$("#lightbox-contact-sponsorship-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-instructions").css("display", "none");
+	$("#lightbox-contact-press-tab-on").css("display", "none");
+	$("#lightbox-contact-press-tab-off").css("display", "block");
+	$("#lightbox-contact-press-instructions").css("display", "none");
+
+	$("#lightbox-contact-form").css("display", "none");
+	$("#lightbox-contact-nominate-form").css("display", "none");
+
+	if (tab == "nominate")
+	{
+		$("#lightbox-contact-nominate-tab-on").css("display", "block");
+		$("#lightbox-contact-nominate-tab-off").css("display", "none");
+		$("#lightbox-contact-nominate-form").css("display", "block");
+	}
+	else
+	{
+		$("#lightbox-contact-" + tab + "-tab-on").css("display", "block");
+		$("#lightbox-contact-" + tab + "-tab-off").css("display", "none");
+		$("#lightbox-contact-" + tab + "-instructions").css("display", "block");
+		document.getElementById("lightbox-contact-type").value = tab;
+		$("#lightbox-contact-form").css("display", "block");
+	}
+}
+
+function lightbox_contact_submit(type)
+{
+	if (type == "nominate")
+	{
+		var values = $("#lightbox-contact-nominate-form").serialize();
+	}
+	else
+	{
+		var values = $("#lightbox-contact-form").serialize();
+	}
+	$.ajax({
+		url: "/contact/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! We'll be in touch soon.");
+				document.getElementById("lightbox-contact-form").reset();
+				document.getElementById("lightbox-contact-nominate-form").reset();
+				lightbox_contact_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_changeemail_show(user)
+{
+	$("#lightbox-changeemail-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-changeemail-overlay").css("display", "block");
+	$("#lightbox-changeemail-overlay").css("width", $(document).width());
+	$("#lightbox-changeemail-overlay").css("height", $(document).height() + 100);
+	$("#lightbox-changeemail-form-email").val(user);
+}
+
+function lightbox_changeemail_hide()
+{
+	$("#lightbox-changeemail-overlay").css("display", "none");
+}
+
+function lightbox_changeemail_submit()
+{
+	var values = $("#lightbox-changeemail-form").serialize();
+	$.ajax({
+		url: "/change-email/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! Your request has been sent.");
+				document.getElementById("lightbox-changeemail-form").reset();
+				lightbox_changeemail_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_refundpolicy_show()
+{
+	$("#lightbox-refundpolicy-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-refundpolicy-overlay").css("display", "block");
+	$("#lightbox-refundpolicy-overlay").css("width", $(document).width());
+	$("#lightbox-refundpolicy-overlay").css("height", $(document).height());
+}
+
+function lightbox_refundpolicy_hide()
+{
+	$("#lightbox-refundpolicy-overlay").css("display", "none");
+}
+</script>
+
+<link rel="stylesheet" href="/_css/mllnnl.css"></link>
+</head>
+<body style="background:url(/_images/_common/bg3a.jpg) center -0px no-repeat; background-attachment:fixed;">
+
+<!-- Contact Us Lightbox -->
+<div class="lightbox" id="lightbox-contact-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(152, 208, 231, 0.7); display:none;">
+<div class="lightbox" id="lightbox-contact-panel" style="margin:0px auto 20px auto; width: 100%; max-width: 1000px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">CONTACT US</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_contact_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin-top:10px;">
+<tr style="vertical-align:top;">
+<td>
+    <div class="lightbox" id="lightbox-contact-general-tab-on" style="width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px;">GENERAL INQUIRIES</div>
+    <div class="lightbox" id="lightbox-contact-general-tab-off" style="width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px; display:none;"><a href="javascript:lightbox_contact_select('general')" style="color:inherit; text-decoration:none;">GENERAL INQUIRIES</a></div>
+    <div class="lightbox" id="lightbox-contact-nominate-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">NOMINATE AN ATTENDEE</div>
+    <div class="lightbox" id="lightbox-contact-nominate-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('nominate')" style="color:inherit; text-decoration:none;">NOMINATE AN ATTENDEE</a></div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">SPONSORSHIP</div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('sponsorship')" style="color:inherit; text-decoration:none;">SPONSORSHIP</a></div>
+    <div class="lightbox" id="lightbox-contact-press-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">PRESS & MEDIA</div>
+    <div class="lightbox" id="lightbox-contact-press-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('press')" style="color:inherit; text-decoration:none;">PRESS & MEDIA</a></div>
+    </td>
+<td style="width:100%;">
+    <form method=POST class="lightbox" id="lightbox-contact-form">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div class="lightbox" id="lightbox-contact-general-instructions" style="text-align:center; font-size:20px; letter-spacing:1px;">For more information about Summit.</div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">For more information about strategic ways to partner.</div>
+    <div class="lightbox" id="lightbox-contact-press-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">Interested in Covering Summit at Sea?<br>Please fill out this form.</div>
+
+    <div style="margin:40px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">FIRST NAME</div>
+        <div><input type=text name="first_name" value="Blake TEST 3" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">LAST NAME</div>
+        <div><input type=text name="last_name" value="Blake" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">COMPANY</div>
+    <div><input type=text name="company" value="" style="width:660px;"></div>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">TITLE</div>
+        <div><input type=text name="title" value="Lord Xenu" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">PHONE</div>
+    <div><input type=text name="phone" value="" style="width:320px;"></div>
+    <div class="label-top" style="margin-top:25px;">ADDITIONAL INFORMATION</div>
+    <div><textarea name="comments" style="width:660px; height:220px;"></textarea></div>
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('')"><img src="/_images/contact/button_submit.png"></a></div>
+    <input type=hidden class="lightbox" id="lightbox-contact-type" name="contact_type" value="general">
+    </form>
+
+    <form method=POST class="lightbox" id="lightbox-contact-nominate-form" style="display:none;">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div style="margin:0px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">YOUR FIRST NAME</div>
+        <div><input type=text name="first_name" value="Blake TEST 3" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">YOUR LAST NAME</div>
+        <div><input type=text name="last_name" value="Blake" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">YOUR EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL OF YOUR SUMMIT COMMUNITY TEAM CONTACT</div>
+        <div><input type=text name="curator_email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div style="margin-top:25px; border-top:1px solid #000000;"></div>
+
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS FIRST NAME</div>
+        <div><input type=text name="nominee_first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS LAST NAME</div>
+        <div><input type=text name="nominee_last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS EMAIL</div>
+        <div><input type=text name="nominee_email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS ORGANIZATION</div>
+        <div><input type=text name="nominee_organization" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS TITLE</div>
+        <div><input type=text name="nominee_title" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS PHONE NUMBER</div>
+        <div><input type=text name="nominee_phone" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div class="label-top" style="margin-top:25px;">WHY DO YOU FEEL THIS PERSON IS A GOOD FIT FOR SUMMIT AT SEA?</div>
+    <div><textarea name="nominee_description" style="width:660px; height:200px;"></textarea></div>
+    <div class="label-top" style="margin-top:25px;">LINK TO RECENT PRESS ABOUT THIS PERSON</div>
+    <div><textarea name="nominee_press" style="width:660px; height:100px;"></textarea></div>
+
+    <input type=hidden name="contact_type" value="nominate">
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('nominate')"><img src="/_images/contact/button_submit.png"></a></div>
+    </form>
+    </td>
+</tr>
+</table>
+</div>
+</div>
+<!-- /Contact Us Lightbox -->
+
+<!-- Change Email Lightbox -->
+<div class="lightbox" id="lightbox-changeemail-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div class="lightbox" id="lightbox-changeemail-panel" style="margin:0px auto 20px auto; width:800px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">REQUEST FOR EMAIL CHANGE</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_changeemail_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<form method=POST class="lightbox" id="lightbox-changeemail-form" onSubmit="return false;">
+    <div style="margin:10px auto 0px auto; border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+
+    <div style="text-align:center; font-size:20px; letter-spacing:1px;">Please let us know what you'd like to change your email address to:</div>
+    <div style="margin:20px auto 0px auto; display:table;">
+    <div class="label-top">NEW EMAIL</div>
+    <div><input type=text name="email" value="" style="width:660px;"></div>
+    </div>
+    <div style="margin-top:20px; text-align:center; font-size:20px; letter-spacing:1px;">Please allow us time to update our system. Thanks!</div>
+
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_changeemail_submit()"><img src="/_images/changeemail/button_submit.png"></a></div>
+    <input type=hidden name="user" class="lightbox" id="lightbox-changeemail-form-email" value="">
+</form>
+</div>
+</div>
+<!-- /Change Email Lightbox -->
+
+<!-- Refund Lightbox -->
+<div class="lightbox" id="lightbox-refundpolicy-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div class="lightbox" id="lightbox-refundpolicy-panel" style="margin:0px auto 20px auto; width:800px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+    <tr style="vertical-align:top;">
+    <td><div style="width:40px; height:40px;"></div></td>
+    <td><div class="page-title" style="font-family:roice-regularregular; letter-spacing:normal;">Refund Policy</div></td>
+    <td style="padding-top:16px;"><a href="javascript:lightbox_refundpolicy_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="width:40px; height:40px; float:right;"></div></td>
+    </tr>
+    </table>
+
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:25px 25px 25px 25px;">
+    <p>Any attendee who has purchased a ticket to Summit at Sea and is unable to attend due to any reason including but not limited to a personal matter, scheduling conflict, or force majeur must inform Summit Series via email by the following dates:</p>
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">1.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to January 1, 2016 shall be refunded 100% of the cost of ticket sale less registration processing fee.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">2.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to March 1, 2016 shall be refunded 75% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">3.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to May 1, 2016 shall be refunded 50% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">4.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to July 1, 2016 shall be refunded 25% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">5.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed on or after July 1, 2016 shall not be refunded.</td>
+    </tr>
+    </table>
+    <p style="margin-top:10px;">Registrations are non-transferable.</p>
+    <p style="margin-top:10px;">To notify Summit Series of a cancellation, please email <a href="mailto:cancellations@summitseries.com">cancellations@summitseries.com</a>.</p>
+    </div>
+</div>
+</div>
+<!-- /Refund PolicyLightbox -->
+
+<script>
+function page_industry_select()
+{
+	subindustries = new Array();
+		subindustries["1"] = new Array();
+		subindustries["1"]["101"] = "Data Storage";
+		subindustries["1"]["102"] = "SAAS";
+		subindustries["1"]["103"] = "Database";
+		subindustries["1"]["104"] = "Service Provider";
+		subindustries["1"]["105"] = "Social Network";
+		subindustries["1"]["106"] = "E-Commerce";
+		subindustries["1"]["107"] = "Search Engine";
+			subindustries["2"] = new Array();
+		subindustries["2"]["201"] = "Database";
+		subindustries["2"]["202"] = "Service Provider";
+		subindustries["2"]["203"] = "Computer & Network Security";
+		subindustries["2"]["204"] = "Hardware";
+		subindustries["2"]["205"] = "Software";
+		subindustries["2"]["206"] = "Hosting";
+		subindustries["2"]["207"] = "Analytics";
+		subindustries["2"]["299"] = "Other";
+			subindustries["3"] = new Array();
+		subindustries["3"]["301"] = "Market Research";
+		subindustries["3"]["302"] = "PR & Communications";
+		subindustries["3"]["303"] = "Internet Marketing";
+		subindustries["3"]["304"] = "Agency";
+		subindustries["3"]["305"] = "Outdoor Marketing";
+		subindustries["3"]["306"] = "Marketing Services";
+		subindustries["3"]["307"] = "Direct Marketing";
+			subindustries["4"] = new Array();
+		subindustries["4"]["401"] = "Architecture & Planning";
+		subindustries["4"]["402"] = "Product & Industrial Design";
+		subindustries["4"]["403"] = "Graphic Design";
+		subindustries["4"]["404"] = "Fashion";
+		subindustries["4"]["405"] = "Photography";
+		subindustries["4"]["406"] = "Prints & Graphics";
+		subindustries["4"]["407"] = "Infographics";
+		subindustries["4"]["408"] = "Fine Art, Collections & Galleries";
+		subindustries["4"]["409"] = "Animation";
+		subindustries["4"]["410"] = "Creative Writing";
+		subindustries["4"]["411"] = "Supplies";
+			subindustries["5"] = new Array();
+		subindustries["5"]["501"] = "Business Supplies & Equip.";
+		subindustries["5"]["502"] = "Logistics & Supply Chain";
+		subindustries["5"]["503"] = "Consulting";
+		subindustries["5"]["504"] = "Staffing, Recruiting, HR";
+		subindustries["5"]["505"] = "Printing & Publishing";
+		subindustries["5"]["506"] = "Incubator";
+		subindustries["5"]["507"] = "Professional Training & Coaching";
+		subindustries["5"]["508"] = "Outsourcing & Offshoring";
+			subindustries["6"] = new Array();
+		subindustries["6"]["601"] = "Wine, Spirits, Beer";
+		subindustries["6"]["602"] = "Vitamins & Supplements";
+		subindustries["6"]["603"] = "Beverages";
+		subindustries["6"]["604"] = "Snacks";
+		subindustries["6"]["605"] = "Health Foods";
+			subindustries["7"] = new Array();
+		subindustries["7"]["701"] = "Consumer Electronics";
+		subindustries["7"]["702"] = "Apparel / Garment";
+		subindustries["7"]["703"] = "Sporting Goods";
+		subindustries["7"]["704"] = "Luxury Goods & Jewelry";
+		subindustries["7"]["705"] = "Cosmetics/Hair/Skin Care";
+		subindustries["7"]["706"] = "Appliances";
+		subindustries["7"]["707"] = "Furniture";
+		subindustries["7"]["708"] = "Cleaning Products";
+		subindustries["7"]["709"] = "Toys";
+		subindustries["7"]["710"] = "Health & Beauty";
+			subindustries["8"] = new Array();
+		subindustries["8"]["801"] = "E-Learning";
+		subindustries["8"]["802"] = "Mobile Education";
+		subindustries["8"]["803"] = "Higher Education";
+		subindustries["8"]["804"] = "Primary-Secondary Education";
+		subindustries["8"]["805"] = "Research";
+		subindustries["8"]["806"] = "Nanotechnology";
+		subindustries["8"]["807"] = "Artificial Intell. & Singularity";
+			subindustries["9"] = new Array();
+		subindustries["9"]["901"] = "Utilities";
+		subindustries["9"]["902"] = "Alternative & Renewable Energy";
+		subindustries["9"]["903"] = "Clean Tech";
+		subindustries["9"]["904"] = "Recycling & Waste Mgmt.";
+		subindustries["9"]["905"] = "Carbon Markets";
+		subindustries["9"]["906"] = "Natural Gas / Oil";
+		subindustries["9"]["907"] = "Sciences";
+			subindustries["10"] = new Array();
+		subindustries["10"]["1001"] = "Civil Engineering";
+		subindustries["10"]["1002"] = "Electrical Engineering";
+		subindustries["10"]["1003"] = "Industrial Engineering";
+		subindustries["10"]["1004"] = "Chemical Engineering";
+		subindustries["10"]["1005"] = "Aerospace Engineering";
+			subindustries["11"] = new Array();
+		subindustries["11"]["1101"] = "Venue Owner";
+		subindustries["11"]["1102"] = "Promotions";
+		subindustries["11"]["1103"] = "Production";
+			subindustries["12"] = new Array();
+		subindustries["12"]["1201"] = "Venture Capital";
+		subindustries["12"]["1202"] = "Private Equity";
+		subindustries["12"]["1203"] = "Angel Investing";
+		subindustries["12"]["1204"] = "Accounting";
+		subindustries["12"]["1205"] = "Capital Markets";
+		subindustries["12"]["1206"] = "Insurance";
+		subindustries["12"]["1207"] = "Investment Banking";
+		subindustries["12"]["1208"] = "Investment Mgmt";
+		subindustries["12"]["1209"] = "Hedge Fund";
+		subindustries["12"]["1210"] = "ATM";
+		subindustries["12"]["1211"] = "Transaction/Payment Processing";
+			subindustries["13"] = new Array();
+		subindustries["13"]["1301"] = "Facilities & Services";
+		subindustries["13"]["1302"] = "Education";
+		subindustries["13"]["1303"] = "Exploration";
+		subindustries["13"]["1304"] = "Gambling";
+		subindustries["13"]["1305"] = "Extreme Sports";
+		subindustries["13"]["1306"] = "Professional Sports";
+			subindustries["14"] = new Array();
+		subindustries["14"]["1401"] = "Restaurants";
+		subindustries["14"]["1402"] = "Agriculture";
+		subindustries["14"]["1403"] = "Bottling";
+		subindustries["14"]["1404"] = "Franchise";
+		subindustries["14"]["1405"] = "Retail";
+		subindustries["14"]["1406"] = "Distribution";
+			subindustries["16"] = new Array();
+		subindustries["16"]["1601"] = "Politics";
+		subindustries["16"]["1602"] = "Systems";
+		subindustries["16"]["1603"] = "Governement Administration";
+		subindustries["16"]["1604"] = "Gov't Relations";
+		subindustries["16"]["1605"] = "Defense & Space";
+		subindustries["16"]["1606"] = "Armed Services";
+			subindustries["17"] = new Array();
+		subindustries["17"]["1701"] = "Yoga/Pilates";
+		subindustries["17"]["1702"] = "Life Coach";
+		subindustries["17"]["1703"] = "Spiritual Education / Leadership / Organization";
+		subindustries["17"]["1704"] = "Physical Therapy";
+		subindustries["17"]["1705"] = "Fitness & Nutrition";
+			subindustries["18"] = new Array();
+		subindustries["18"]["1801"] = "Hotel";
+		subindustries["18"]["1802"] = "Social Club / Membership Org.";
+		subindustries["18"]["1803"] = "Spa Services";
+		subindustries["18"]["1804"] = "Travel";
+		subindustries["18"]["1805"] = "Boating/Yachts";
+		subindustries["18"]["1806"] = "Casino";
+		subindustries["18"]["1807"] = "Cruiseline";
+		subindustries["18"]["1808"] = "Resort";
+		subindustries["18"]["1809"] = "Private Aviation";
+			subindustries["19"] = new Array();
+		subindustries["19"]["1901"] = "Judiciary";
+		subindustries["19"]["1902"] = "Law Enforcement";
+		subindustries["19"]["1903"] = "Law Practice";
+		subindustries["19"]["1904"] = "Legal Services";
+		subindustries["19"]["1905"] = "Legislative Office";
+			subindustries["20"] = new Array();
+		subindustries["20"]["2001"] = "Textiles";
+		subindustries["20"]["2002"] = "Heavy Machinery";
+		subindustries["20"]["2003"] = "Chemicals Coatings & Plastics";
+		subindustries["20"]["2004"] = "Glass Ceramics & Concrete";
+		subindustries["20"]["2005"] = "Industrial Facilities & Infrastructure";
+		subindustries["20"]["2006"] = "Automotive";
+		subindustries["20"]["2007"] = "Maritime & Shipbuilding";
+		subindustries["20"]["2008"] = "Electronics Components & Semiconducters";
+		subindustries["20"]["2009"] = "Paper & Forest Products";
+		subindustries["20"]["2010"] = "Metals & Mining";
+		subindustries["20"]["2011"] = "Import/Export";
+		subindustries["20"]["2012"] = "Wholesale";
+		subindustries["20"]["2013"] = "Railroad Mfg";
+			subindustries["21"] = new Array();
+		subindustries["21"]["2101"] = "Broadcast Media";
+		subindustries["21"]["2102"] = "Social Media";
+		subindustries["21"]["2103"] = "Blogging";
+		subindustries["21"]["2104"] = "Digital Media";
+		subindustries["21"]["2105"] = "Media Production";
+		subindustries["21"]["2106"] = "Print Publications";
+		subindustries["21"]["2107"] = "Journalism";
+		subindustries["21"]["2108"] = "Wikis (User Generated Content)";
+		subindustries["21"]["2109"] = "Video";
+			subindustries["22"] = new Array();
+		subindustries["22"]["2201"] = "Biotech/ Pharma / Genetics";
+		subindustries["22"]["2202"] = "Medical/Life Sciences";
+		subindustries["22"]["2203"] = "Hospital & Healthcare";
+		subindustries["22"]["2204"] = "Medical Devices";
+		subindustries["22"]["2205"] = "Medical Services";
+		subindustries["22"]["2206"] = "Science / Research";
+			subindustries["23"] = new Array();
+		subindustries["23"]["2301"] = "Telecom";
+		subindustries["23"]["2302"] = "Carrier";
+		subindustries["23"]["2303"] = "Wireline Infrastructure";
+		subindustries["23"]["2304"] = "Payments";
+		subindustries["23"]["2305"] = "Device Production";
+		subindustries["23"]["2306"] = "Applications";
+			subindustries["24"] = new Array();
+		subindustries["24"]["2401"] = "Movies/TV";
+		subindustries["24"]["2402"] = "Music";
+		subindustries["24"]["2403"] = "Theatre/Performing Arts";
+			subindustries["25"] = new Array();
+		subindustries["25"]["2501"] = "Grant Making Org.";
+		subindustries["25"]["2502"] = "Civic/Social Org.";
+		subindustries["25"]["2503"] = "Aid/Awareness";
+		subindustries["25"]["2504"] = "Museum";
+		subindustries["25"]["2505"] = "Religious Institution";
+		subindustries["25"]["2506"] = "Education Institution";
+			subindustries["26"] = new Array();
+		subindustries["26"]["2601"] = "Green Building";
+		subindustries["26"]["2602"] = "Commercial Real Estate";
+		subindustries["26"]["2603"] = "Property Management";
+		subindustries["26"]["2604"] = "Rental & Leasing Services";
+		subindustries["26"]["2605"] = "Building Materials";
+		subindustries["26"]["2606"] = "Homebuilding";
+		subindustries["26"]["2607"] = "Residential Real Estate";
+			subindustries["27"] = new Array();
+		subindustries["27"]["2701"] = "Trucking/Rail";
+		subindustries["27"]["2702"] = "Airlines";
+		subindustries["27"]["2703"] = "Package/Freight Delivery";
+		subindustries["27"]["2704"] = "Packaging & Containers";
+
+	industry_field = document.getElementById("industry");
+	subindustry_field = document.getElementById("subindustry");
+	industry_selected_value = industry_field.options[industry_field.options.selectedIndex].value;
+
+	for (var i = subindustry_field.options.length - 1; i >= 0; i--)
+    	{
+        	subindustry_field.options[i] = null;
+    	}
+
+	if (industry_selected_value == "")
+	{
+		var new_option = document.createElement("OPTION");
+		new_option.text = "Please first select an industry";
+		new_option.value = "";
+		subindustry_field.options.add(new_option);
+	}
+	else if (industry_selected_value == "99")
+	{
+	}
+	else
+	{
+		var new_option = document.createElement("OPTION");
+		new_option.text = "";
+		new_option.value = "";
+		subindustry_field.options.add(new_option);
+
+		subindustry_selected_index = 0;
+		selected_subindustries = subindustries[industry_selected_value];
+		var i = 1;
+		for (var cur_subindustry_id in selected_subindustries)
+		{
+			if (cur_subindustry_id == "")
+			{
+				subindustry_selected_index = i;
+			}
+
+			var new_option = document.createElement("OPTION");
+			new_option.text = selected_subindustries[cur_subindustry_id];
+			new_option.value = cur_subindustry_id;
+			subindustry_field.options.add(new_option);
+
+			i++;
+		}
+
+		subindustry_field.options.selectedIndex = subindustry_selected_index;
+	}
+}
+
+$(document).ready(function()
+{
+	$(window).bind('beforeunload', function()
+	{
+		return "You have not completed the registration process.";
+	});
+
+	$("#mainform").submit(function()
+	{
+		$(window).unbind("beforeunload");
+	});
+});
+</script>
+
+<header class="page-header">
+
+    <div class="logout" style="text-align:right;">
+        <a href="/user/logout.htm" class="btn btn-trans" style="color:#ff4989;">LOG OUT</a>
+    </div>
+
+    <div style="margin:0px auto 0px auto; width: 100%; max-width: 1000px;">
+        <div style="margin:20px auto 30px auto; display:table;">
+            <a class="logo" href="/">
+                <img src="/_images/_common/title2017.png"></a>
+            </div>
+    </div>
+
+    <div style="margin:0px auto 0px auto; width: 100%; max-width: 1000px;">
+
+    <table class="site-sections" border=0 cellspacing=0 cellpadding=0 style="margin:0px auto 0px auto;">
+    <tr>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">01</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Welcome</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">02</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Accommodations</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">03</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Payment &amp; Info</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">04</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Success</td>
+        </tr>
+        </table>
+        </td>
+    </tr>
+    </table>
+
+    <!--<div style="margin:41px auto 0px auto; display:table;"><img src="/_images/registration/separator3.png"></div>-->
+
+    <div class="page-title" style="margin-top:50px;">Profile Info</div>
+</header>
+
+<form method=POST id="mainform" enctype="multipart/form-data" action="/registration/register2.htm">
+
+<div style="margin:20px auto 0px auto; font-size:20px; text-align:center; line-height:30px;">Thank you.  Your purchase has been made. To complete your<br>registration, please fill out your profile information below.</div>
+
+<div class="section-title" style="margin:40px auto 0px auto;">Passport Info</div>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:30px 0pc 0px 0px;">
+<tr>
+<td style="padding:10px 0px 0px 0px;">
+    <div><input type=text name="passport_name" value="Blake TEST 3 Blake" style="width:320px;" placeholder="Exact Name as It Appears on Your Passport"></div>
+    </td>
+<td style="padding:10px 0px 0px 20px;">
+    <div><input type=text name="dob" value="05/29/1990" style="width:320px;" placeholder="Date of Birth (mm/dd/yyyy)"></div>
+    </td>
+</tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin:60px 0px 0px 0px;">
+<tr>
+<td><div><input type=text name="first_name" value="Blake TEST 3" style="width:320px;" placeholder="First Name"></div>
+    </td>
+<td style="padding-left:20px;">
+    <div><input type=text name="last_name" value="Blake" style="width:320px;" placeholder="Last Name"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="title" value="Lord Xenu" style="width:320px;" placeholder="Title"></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr style="vertical-align:top;">
+<td style="padding:0px 0px 0px 0px;">
+    <div><input type=text name="company_name" value="SeaOrg" style="width:660px;" placeholder="Company"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <table boder=0 cellspacing=0 cellpadding=0 style="width:320px; height:50px;">
+    <tr>
+    <td class="form-element"><table border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td><input type=checkbox name="company_nonprofit_flag" value="1" ></td>
+        <td style="padding:0px 0px 0px 8px;">Non-Profit Company</td>
+        </tr>
+        </table>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr style="vertical-align:top;">
+<td style="padding:0px 0px 0px 0px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="height:50px; width:320px;">
+    <tr>
+    <td ><table class="form-element" border=0 cellspacing=0 cellpadding=0 style="height:50px; width:320px;">
+        <tr>
+        <td>Headshot</td>
+        <td style="padding-left:8px;"><input type=file name="profile_pic" value="" size=18 style="width:210px;"></td>
+        </tr>
+        </table>
+        <div style="font-size:11px;">Max file size 10M. Accepted formats: JPG, PNG, GIF</div>
+        </td>
+    </tr>
+    </table>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><select id="industry" name="industry" style="width:320px;" onChange="page_industry_select()">
+         <option value="">Industry</option>
+         <option value="1">Web-Based Technology</option>
+        <option value="2">Information Technology (IT)</option>
+        <option value="3">Advertising, Branding and Marketing</option>
+        <option value="4">Art and Design</option>
+        <option value="5">Business/Professional Services</option>
+        <option value="6">Consumer Packaged Goods</option>
+        <option value="7">Consumer Products</option>
+        <option value="8">Education // Sciences</option>
+        <option value="9">Energy / Environment</option>
+        <option value="10">Engineering</option>
+        <option value="11">Event Production and Services</option>
+        <option value="12">Financial Services</option>
+        <option value="13">Fitness and Recreation</option>
+        <option value="14">Food/Beverage</option>
+        <option value="15">Gaming</option>
+        <option value="16">Government/Defense</option>
+        <option value="17">Health Wellness and Spiritual</option>
+        <option value="18">Hospitality and Travel/Leisure</option>
+        <option value="19">Law/Legal Services</option>
+        <option value="20">Manufacturing, Trade and Natural Resources</option>
+        <option value="21">Media</option>
+        <option value="22">Medical</option>
+        <option value="23">Mobile</option>
+        <option value="24">Music and Entertainment</option>
+        <option value="25">Not For Profit</option>
+        <option value="26">Real Estate/Construction</option>
+        <option value="27">Shipping and Transportation</option>
+        <option value="99">Other</option>
+         </select></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><select id="subindustry" name="subindustry" style="width:320px;">
+         <option value="">Sub-Industry</option>
+         </select></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr>
+<td style="padding:0px 0px 0px 0px;">
+    <div><textarea name="bio" style="width:1000px; height:111px;" placeholder="Biography"></textarea></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr>
+<td style="padding:0px 0px 0px 0px;">
+    <div><input type=text name="expertise" value="" style="width:490px;" placeholder="Areas of Expertise"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="passions" value="" style="width:490px;" placeholder="Passions"></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr>
+<td class="form-element" style="padding:0px 0px 0px 0px;">
+    <table border=0 cellspacing=0 style="width:320px; height:50px;">
+    <tr>
+    <td style="font-family:Times New Roman; font-size:16px;">blake3test@summit.co &nbsp;&nbsp;&nbsp; <a class="btn" href="javascript:lightbox_changeemail_show('30654')">Change Email</a></td>
+    </tr>
+    </table>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="cell_phone_number" value="8015551234" style="width:320px;" placeholder="Mobile"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><select name="col_home_location" style="width:320px;">
+         <option value="">Hub City</option>
+         <option value="167">Amsterdam, Netherlands</option>
+<option value="158" selected>Athens, GA</option>
+<option value="39">Atlanta, GA</option>
+<option value="12">Austin, TX</option>
+<option value="172">Berlin, Germany</option>
+<option value="24">Boston, MA</option>
+<option value="165">Boulder, CO</option>
+<option value="179">Cape town, South Africa</option>
+<option value="4">Chicago, IL</option>
+<option value="62">Cincinnati, OH</option>
+<option value="10">Dallas, TX</option>
+<option value="21">Denver, CO</option>
+<option value="18">Detroit, MI</option>
+<option value="227">Dubai, United Arab Emirates</option>
+<option value="106">Eden, UT</option>
+<option value="189">Hong Kong, Hong Kong</option>
+<option value="5">Houston, TX</option>
+<option value="190">Istanbul, Turkey</option>
+<option value="228">Johannesburg, South Africa</option>
+<option value="229">Lake Tahoe, CA</option>
+<option value="29">Las vegas, NV</option>
+<option value="195">London, United Kingdom</option>
+<option value="3">Los Angeles, CA</option>
+<option value="197">Madrid, Spain</option>
+<option value="199">Mexico City, Mexico</option>
+<option value="44">Miami, FL</option>
+<option value="230">Montreal, Canada</option>
+<option value="200">Moscow, Russian Federation</option>
+<option value="25">Nashville, TN</option>
+<option value="2">New York, NY</option>
+<option value="204">Paris, France</option>
+<option value="6">Philadelphia , PA</option>
+<option value="28">Portland, OR</option>
+<option value="105">Salt Lake City, UT</option>
+<option value="9">San diego, CA</option>
+<option value="51">San Francisco, CA</option>
+<option value="212">Sao Paulo, Brazil</option>
+<option value="19">Seattle, WA</option>
+<option value="219">Sydney, Australia</option>
+<option value="221">Tel Aviv, Israel</option>
+<option value="223">Toronto, Canada</option>
+<option value="124">Vancouver, WA</option>
+<option value="231">Vancouver, Canada</option>
+<option value="22">Washington D.C., United States</option>
+         </select></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr>
+<td style="padding:0px 0px 0px 0px;">
+    <div><input type=text name="lanyard_name" value="Blake TEST 3 Blake" style="width:320px;" placeholder="Name on Lanyard"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="company_lanyard_name" value="SeaOrg" style="width:320px;" placeholder="Company on Lanyard"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><select name="cell_phone_device" style="width:320px;">
+         <option value="">Cell Phone Device</option>
+         <option value="101">BlackBerry</option>
+<option value="102">iPhone</option>
+<option value="103" selected>Android</option>
+<option value="104">Other</option>
+         </select></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr>
+<td style="padding:0px 0px 0px 0px;">
+    <div><select name="shoe_size" style="width:320px;">
+         <option value="">Shoe Size</option>
+         <option value="1030">3</option>
+        <option value="1035">3-1/2</option>
+        <option value="1040">4</option>
+        <option value="1045">4-1/2</option>
+        <option value="1050">5</option>
+        <option value="1055">5-1/2</option>
+        <option value="1060">6</option>
+        <option value="1065">6-1/2</option>
+        <option value="1070">7</option>
+        <option value="1075">7-1/2</option>
+        <option value="1080">8</option>
+        <option value="1085">8-1/2</option>
+        <option value="1090">9</option>
+        <option value="1095">9-1/2</option>
+        <option value="1100">10</option>
+        <option value="1105">10-1/2</option>
+        <option value="1110">11</option>
+        <option value="1115">11-1/2</option>
+        <option value="1120">12</option>
+        <option value="1125">12-1/2</option>
+        <option value="1130">13</option>
+        <option value="1135">13-1/2</option>
+        <option value="1140">14</option>
+        <option value="1145">14-1/2</option>
+        <option value="1150">15</option>
+         </select></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><select name="shirt_size" style="width:320px;">
+         <option value="">Shirt Size</option>
+         <option value="101">Men's Small</option>
+        <option value="102">Men's Medium</option>
+        <option value="103">Men's Large</option>
+        <option value="104">Men's X-Large</option>
+        <option value="105">Men's 2XL</option>
+        <option value="201">Women's X-Small</option>
+        <option value="205">Women's Small</option>
+        <option value="202">Women's Medium</option>
+        <option value="203">Women's Large</option>
+        <option value="204">Women's X-Large</option>
+         </select></div>
+    </td>
+</tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+<tr style="vertical-align:top;">
+<td style="padding:0px 0px 0px 0px;">
+    <table boder=0 cellspacing=0 cellpadding=0 style="width:320px; height:50px;">
+    <tr>
+    <td class="form-element">
+        <table border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td style="border:0px; padding:0px 0px 0px 0px; background:none;"><input type=checkbox name="assistant_flag" value="1" ></td>
+        <td style="padding:0px 0px 0px 8px;">Assistant Correspondence</td>
+        </tr>
+        </table></td>
+    </tr>
+    </table>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="assistant_name" value="" style="width:320px;" placeholder="Full Name"></div>
+    </td>
+<td style="padding:0px 0px 0px 20px;">
+    <div><input type=text name="assistant_email" value="" style="width:320px;" placeholder="Email"></div>
+    </td>
+</tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin:60px auto 0px auto;">
+<tr>
+<td>
+    <button class="btn" type=submit name="CONTINUE" value="&nbsp;" style="width:225px; height:98px; border:0px; background:url(/_images/_common/buttons/submit.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';">
+    <span class="btn-label"> Continue </span>
+    </button>
+</td>
+</tr>
+</table>
+
+<input type=hidden name="headshot_image_url" value="">
+<input type=hidden name="headshot_thumbnail_url" value="">
+</form>
+
+<script>
+page_industry_select();
+</script>
+</div>
+
+<div style="margin:120px 0px 10px 0px; text-align:center;">2016 &copy; The Summit Series, LLC &nbsp;&bull;&nbsp; <a href="/terms/">Terms of Service</a></div>
+
+
+<!-- Start of ReTargeter Tag -->
+<script type="text/javascript" src="https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/json3.js"></script>
+<script type="text/javascript">
+    if( typeof _rt_cgi == "undefined" ){
+    var _rt_cgi = 1248;
+    var _rt_base_url = "https://lt.retargeter.com/";
+    var _rt_js_base_url = "https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/";
+    var _rt_init_src = _rt_js_base_url+"init_super_tag.js";
+    var _rt_refresh_st = false;
+    var _rt_record = function(params){if(typeof document.getElementsByTagName("_rt_data")[0]=="undefined"){setTimeout(function(){_rt_record(params);},25);}};
+    (function() {var scr = document.createElement("script");scr.src = _rt_init_src;document.getElementsByTagName("head")[0].appendChild(scr);})();}
+    </script>
+<!-- End of ReTargeter Tag -->
+</body>
+</html>

@@ -1,0 +1,1511 @@
+
+<!-- GH1: Men's Ocean View Triple-->
+<!-- GH1: Men's Balcony Triple-->
+<!-- GH1: Interior Shared-->
+<!-- GH1: Ocean View Shared-->
+<!-- GH1: Ocean Balcony Shared-->
+<!-- GH1: Interior Studio Solo-->
+<!-- GH1: Ocean Balcony Solo-->
+<!-- GH1: Mini-Suite Solo-->
+<!-- GH1: Spa Suite Solo-->
+<!-- GH1: Penthouse Suite Solo-->
+<!-- GH1: Deluxe Penthouse Suite Solo-->
+<!-- GH1: Villa Suite-->
+<!-- GH1: Owner's Suite-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Summit at Sea 2016</title>
+<link href="/_css/site.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png" href="/_images/_common/favicon.png">
+<meta name="description" content="Summit at Sea: Gathering today's leaders in business and culture.">
+<meta property="og:type" content="product" />
+<meta property="og:url" content="http://sas.summit.co/" />
+<meta property="og:title" content="Summit at Sea 2016" />
+<meta property="og:image" content="http://sas.summit.co/_images/_facebook/og_logo.jpg" />
+<meta property="og:description" content="Summit at Sea: Gathering today's leaders in business and culture." />
+
+<script LANGUAGE="JavaScript" src="/_js/jquery-1.4.4.min.js"></script>
+<script>
+function lightbox_contact_show()
+{
+	$("#lightbox-contact-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-contact-overlay").css("display", "block");
+	$("#lightbox-contact-overlay").css("width", $(document).width());
+	$("#lightbox-contact-overlay").css("height", $(document).height() + 100);
+}
+
+function lightbox_contact_hide()
+{
+	$("#lightbox-contact-overlay").css("display", "none");
+}
+
+function lightbox_contact_select(tab)
+{
+	$("#lightbox-contact-general-tab-on").css("display", "none");
+	$("#lightbox-contact-general-tab-off").css("display", "block");
+	$("#lightbox-contact-general-instructions").css("display", "none");
+	$("#lightbox-contact-nominate-tab-on").css("display", "none");
+	$("#lightbox-contact-nominate-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-tab-on").css("display", "none");
+	$("#lightbox-contact-sponsorship-tab-off").css("display", "block");
+	$("#lightbox-contact-sponsorship-instructions").css("display", "none");
+	$("#lightbox-contact-press-tab-on").css("display", "none");
+	$("#lightbox-contact-press-tab-off").css("display", "block");
+	$("#lightbox-contact-press-instructions").css("display", "none");
+
+	$("#lightbox-contact-form").css("display", "none");
+	$("#lightbox-contact-nominate-form").css("display", "none");
+
+	if (tab == "nominate")
+	{
+		$("#lightbox-contact-nominate-tab-on").css("display", "block");
+		$("#lightbox-contact-nominate-tab-off").css("display", "none");
+		$("#lightbox-contact-nominate-form").css("display", "block");
+	}
+	else
+	{
+		$("#lightbox-contact-" + tab + "-tab-on").css("display", "block");
+		$("#lightbox-contact-" + tab + "-tab-off").css("display", "none");
+		$("#lightbox-contact-" + tab + "-instructions").css("display", "block");
+		document.getElementById("lightbox-contact-type").value = tab;
+		$("#lightbox-contact-form").css("display", "block");
+	}
+}
+
+function lightbox_contact_submit(type)
+{
+	if (type == "nominate")
+	{
+		var values = $("#lightbox-contact-nominate-form").serialize();
+	}
+	else
+	{
+		var values = $("#lightbox-contact-form").serialize();
+	}
+	$.ajax({
+		url: "/contact/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! We'll be in touch soon.");
+				document.getElementById("lightbox-contact-form").reset();
+				document.getElementById("lightbox-contact-nominate-form").reset();
+				lightbox_contact_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_changeemail_show(user)
+{
+	$("#lightbox-changeemail-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-changeemail-overlay").css("display", "block");
+	$("#lightbox-changeemail-overlay").css("width", $(document).width());
+	$("#lightbox-changeemail-overlay").css("height", $(document).height() + 100);
+	$("#lightbox-changeemail-form-email").val(user);
+}
+
+function lightbox_changeemail_hide()
+{
+	$("#lightbox-changeemail-overlay").css("display", "none");
+}
+
+function lightbox_changeemail_submit()
+{
+	var values = $("#lightbox-changeemail-form").serialize();
+	$.ajax({
+		url: "/change-email/submit-aj.htm",
+		type: "post",
+		data: values,
+		success: function(data)
+		{
+			if (data == "1::")
+			{
+			  	window.alert("Thanks! Your request has been sent.");
+				document.getElementById("lightbox-changeemail-form").reset();
+				lightbox_changeemail_hide();
+			}
+			else if (data.substr(0, 3) == "0::")
+			{
+				window.alert(data.substr(3));
+			}
+       		},
+		error: function(data)
+		{
+       		}
+	});
+}
+
+function lightbox_refundpolicy_show()
+{
+	$("#lightbox-refundpolicy-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-refundpolicy-overlay").css("display", "block");
+	$("#lightbox-refundpolicy-overlay").css("width", $(document).width());
+	$("#lightbox-refundpolicy-overlay").css("height", $(document).height());
+}
+
+function lightbox_refundpolicy_hide()
+{
+	$("#lightbox-refundpolicy-overlay").css("display", "none");
+}
+</script>
+
+
+<style type="text/css" media="screen">
+  .test {
+    padding: 24px !important;
+  }
+  table {
+    display: block !important;
+  }
+  tr {
+    display: inline !important;
+  }
+  td {
+    display: block !important;
+  }
+</style>
+</head>
+<body style="background:url(/_images/_common/bg3a.jpg) center -0px no-repeat; background-attachment:fixed;">
+
+<!-- Contact Us Lightbox -->
+<div id="lightbox-contact-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(152, 208, 231, 0.7); display:none;">
+<div id="lightbox-contact-panel" style="margin:0px auto 20px auto; width:1000px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">CONTACT US</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_contact_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin-top:10px;">
+<tr style="vertical-align:top;">
+<td>
+    <div id="lightbox-contact-general-tab-on" style="width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px;">GENERAL INQUIRIES</div>
+    <div id="lightbox-contact-general-tab-off" style="width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px; display:none;"><a href="javascript:lightbox_contact_select('general')" style="color:inherit; text-decoration:none;">GENERAL INQUIRIES</a></div>
+    <div id="lightbox-contact-nominate-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">NOMINATE AN ATTENDEE</div>
+    <div id="lightbox-contact-nominate-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('nominate')" style="color:inherit; text-decoration:none;">NOMINATE AN ATTENDEE</a></div>
+    <div id="lightbox-contact-sponsorship-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">SPONSORSHIP</div>
+    <div id="lightbox-contact-sponsorship-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('sponsorship')" style="color:inherit; text-decoration:none;">SPONSORSHIP</a></div>
+    <div id="lightbox-contact-press-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">PRESS & MEDIA</div>
+    <div id="lightbox-contact-press-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('press')" style="color:inherit; text-decoration:none;">PRESS & MEDIA</a></div>
+    </td>
+<td style="width:100%;">
+
+    <form method=POST id="lightbox-contact-form">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div id="lightbox-contact-general-instructions" style="text-align:center; font-size:20px; letter-spacing:1px;">For more information about Summit.</div>
+    <div id="lightbox-contact-sponsorship-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">For more information about strategic ways to partner.</div>
+    <div id="lightbox-contact-press-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">Interested in Covering Summit at Sea?<br>Please fill out this form.</div>
+
+    <div style="margin:40px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">FIRST NAME</div>
+        <div><input type=text name="first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">LAST NAME</div>
+        <div><input type=text name="last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">COMPANY</div>
+    <div><input type=text name="company" value="" style="width:660px;"></div>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">TITLE</div>
+        <div><input type=text name="title" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <div class="label-top" style="margin-top:25px;">PHONE</div>
+    <div><input type=text name="phone" value="" style="width:320px;"></div>
+    <div class="label-top" style="margin-top:25px;">ADDITIONAL INFORMATION</div>
+    <div><textarea name="comments" style="width:660px; height:220px;"></textarea></div>
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('')"><img src="/_images/contact/button_submit.png"></a></div>
+    <input type=hidden id="lightbox-contact-type" name="contact_type" value="general">
+    </form>
+
+    <form method=POST id="lightbox-contact-nominate-form" style="display:none;">
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <div style="margin:0px auto 0px auto; display:table;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td><div class="label-top">YOUR FIRST NAME</div>
+        <div><input type=text name="first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">YOUR LAST NAME</div>
+        <div><input type=text name="last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">YOUR EMAIL</div>
+        <div><input type=text name="email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">EMAIL OF YOUR SUMMIT COMMUNITY TEAM CONTACT</div>
+        <div><input type=text name="curator_email" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div style="margin-top:25px; border-top:1px solid #000000;"></div>
+
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS FIRST NAME</div>
+        <div><input type=text name="nominee_first_name" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS LAST NAME</div>
+        <div><input type=text name="nominee_last_name" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS EMAIL</div>
+        <div><input type=text name="nominee_email" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS ORGANIZATION</div>
+        <div><input type=text name="nominee_organization" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:25px;">
+    <tr>
+    <td><div class="label-top">NOMINATIONS TITLE</div>
+        <div><input type=text name="nominee_title" value="" style="width:320px;"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div class="label-top">NOMINATIONS PHONE NUMBER</div>
+        <div><input type=text name="nominee_phone" value="" style="width:320px;"></div>
+        </td>
+    </tr>
+    </table>
+
+    <div class="label-top" style="margin-top:25px;">WHY DO YOU FEEL THIS PERSON IS A GOOD FIT FOR SUMMIT AT SEA?</div>
+    <div><textarea name="nominee_description" style="width:660px; height:200px;"></textarea></div>
+    <div class="label-top" style="margin-top:25px;">LINK TO RECENT PRESS ABOUT THIS PERSON</div>
+    <div><textarea name="nominee_press" style="width:660px; height:100px;"></textarea></div>
+
+    <input type=hidden name="contact_type" value="nominate">
+    </div>
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('nominate')"><img src="/_images/contact/button_submit.png"></a></div>
+    </form>
+    </td>
+</tr>
+</table>
+</div>
+</div>
+<!-- /Contact Us Lightbox -->
+
+<!-- Change Email Lightbox -->
+<div id="lightbox-changeemail-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div id="lightbox-changeemail-panel" style="margin:0px auto 20px auto; width:800px;">
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td><div style="width:40px; height:40px;"></div></td>
+<td><div class="page-title">REQUEST FOR EMAIL CHANGE</div></td>
+<td style="padding-top:16px;"><a href="javascript:lightbox_changeemail_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+</tr>
+</table>
+
+<form method=POST id="lightbox-changeemail-form" onSubmit="return false;">
+    <div style="margin:10px auto 0px auto; border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+
+    <div style="text-align:center; font-size:20px; letter-spacing:1px;">Please let us know what you'd like to change your email address to:</div>
+    <div style="margin:20px auto 0px auto; display:table;">
+    <div class="label-top">NEW EMAIL</div>
+    <div><input type=text name="email" value="" style="width:660px;"></div>
+    </div>
+    <div style="margin-top:20px; text-align:center; font-size:20px; letter-spacing:1px;">Please allow us time to update our system. Thanks!</div>
+
+    </div>
+    <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_changeemail_submit()"><img src="/_images/changeemail/button_submit.png"></a></div>
+    <input type=hidden name="user" id="lightbox-changeemail-form-email" value="">
+</form>
+</div>
+</div>
+<!-- /Change Email Lightbox -->
+
+<!-- Refund Lightbox -->
+<div id="lightbox-refundpolicy-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div id="lightbox-refundpolicy-panel" style="margin:0px auto 20px auto; width:800px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+    <tr style="vertical-align:top;">
+    <td><div style="width:40px; height:40px;"></div></td>
+    <td><div class="page-title" style="font-family:roice-regularregular; letter-spacing:normal;">Refund Policy</div></td>
+    <td style="padding-top:16px;"><a href="javascript:lightbox_refundpolicy_hide()"><img src="/_images/_common/lightbox_close_icon.png" style="width:40px; height:40px; float:right;"></div></td>
+    </tr>
+    </table>
+
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:25px 25px 25px 25px;">
+    <p>Any attendee who has purchased a ticket to Summit at Sea and is unable to attend due to any reason including but not limited to a personal matter, scheduling conflict, or force majeur must inform Summit Series via email by the following dates:</p>
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">1.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to January 1, 2016 shall be refunded 100% of the cost of ticket sale less registration processing fee.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">2.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to March 1, 2016 shall be refunded 75% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">3.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to May 1, 2016 shall be refunded 50% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">4.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed prior to July 1, 2016 shall be refunded 25% of the cost of ticket sale.</td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <tr style="vertical-align:top;">
+    <td style="padding:10px 0px 0px 0px;">5.</td>
+    <td style="padding:10px 0px 0px 5px;">Cancellations filed on or after July 1, 2016 shall not be refunded.</td>
+    </tr>
+    </table>
+    <p style="margin-top:10px;">Registrations are non-transferable.</p>
+    <p style="margin-top:10px;">To notify Summit Series of a cancellation, please email <a href="mailto:cancellations@summitseries.com">cancellations@summitseries.com</a>.</p>
+    </div>
+</div>
+</div>
+<!-- /Refund PolicyLightbox -->
+
+<div style="margin:16px auto 0px auto; width:1000px;">
+<div style="text-align:right;"><a href="/user/logout.htm" class="hover-underline" style="color:#ff4989;">LOG OUT</a></div>
+</div>
+
+<div style="margin:0px auto 0px auto; width:1000px;">
+<div style="margin:20px auto 30px auto; display:table;"><a href="/"><img src="/_images/_common/title3a.png"></a></div>
+</div>
+
+<div style="margin:0px auto 0px auto; width:1000px;">
+<script>
+function page_roomtype_toggle_show(id)
+{
+	var show_flag = 0;
+	if (document.getElementById("roomtype" + id + "-desc").style.display == "none")
+	{
+		show_flag = 1;
+	}
+
+			document.getElementById("roomtype160-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype160-desc").style.display = 'none';
+ 		document.getElementById("roomtype221-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype221-desc").style.display = 'none';
+ 		document.getElementById("roomtype167-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype167-desc").style.display = 'none';
+ 		document.getElementById("roomtype170-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype170-desc").style.display = 'none';
+ 		document.getElementById("roomtype169-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype169-desc").style.display = 'none';
+ 		document.getElementById("roomtype168-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype168-desc").style.display = 'none';
+ 		document.getElementById("roomtype159-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype159-desc").style.display = 'none';
+ 		document.getElementById("roomtype166-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype166-desc").style.display = 'none';
+ 		document.getElementById("roomtype165-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype165-desc").style.display = 'none';
+ 		document.getElementById("roomtype164-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype164-desc").style.display = 'none';
+ 		document.getElementById("roomtype175-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype175-desc").style.display = 'none';
+ 		document.getElementById("roomtype163-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype163-desc").style.display = 'none';
+ 		document.getElementById("roomtype162-details-marker").src = '/_images/registration/details_off.png';
+	document.getElementById("roomtype162-desc").style.display = 'none';
+
+	if (show_flag)
+	{
+		document.getElementById("roomtype" + id + "-details-marker").src = '/_images/registration/details_on.png';
+		document.getElementById("roomtype" + id + "-desc").style.display = 'block';
+	}
+}
+
+function page_roomtype_toggle_select(id)
+{
+	var select_flag = 0;
+	if (document.getElementById("roomtype" + id + "-select-link").innerHTML == "Select")
+	{
+		select_flag = 1;
+	}
+
+		         	        	document.getElementById("roomtype221-select-marker").src = '/_images/registration/select_off.png';
+	document.getElementById("roomtype221-select-link").innerHTML = 'Select';
+	document.getElementById("roomtype221-select-link").style.color='inherit';
+ 	 	         	        	document.getElementById("roomtype170-select-marker").src = '/_images/registration/select_off.png';
+	document.getElementById("roomtype170-select-link").innerHTML = 'Select';
+	document.getElementById("roomtype170-select-link").style.color='inherit';
+ 	 	        	document.getElementById("roomtype169-select-marker").src = '/_images/registration/select_off.png';
+	document.getElementById("roomtype169-select-link").innerHTML = 'Select';
+	document.getElementById("roomtype169-select-link").style.color='inherit';
+ 	 	         	        	document.getElementById("roomtype159-select-marker").src = '/_images/registration/select_off.png';
+	document.getElementById("roomtype159-select-link").innerHTML = 'Select';
+	document.getElementById("roomtype159-select-link").style.color='inherit';
+ 	 	        	document.getElementById("roomtype166-select-marker").src = '/_images/registration/select_off.png';
+	document.getElementById("roomtype166-select-link").innerHTML = 'Select';
+	document.getElementById("roomtype166-select-link").style.color='inherit';
+ 	 	         	         	         	         	         		document.getElementById("room-product-id").value = "";
+
+	if (select_flag)
+	{
+		document.getElementById("roomtype" + id + "-select-marker").src = '/_images/registration/select_on.png';
+		document.getElementById("roomtype" + id + "-select-link").innerHTML = 'Remove';
+		document.getElementById("roomtype" + id + "-select-link").style.color='#fe5189';
+		document.getElementById("room-product-id").value = id;
+	}
+
+	}
+
+function page_coupon_apply()
+{
+	$(window).unbind("beforeunload");
+	document.getElementById('mainform').submit();
+}
+
+function page_step_goto(step)
+{
+	document.getElementById("step").value = step;
+	document.getElementById("step").form.submit();
+}
+
+function page_lightbox_cvv_show()
+{
+	$("#lightbox-cvv-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-cvv-overlay").css("display", "block");
+	$("#lightbox-cvv-overlay").css("width", $(document).width());
+	$("#lightbox-cvv-overlay").css("height", $(document).height());
+}
+
+function page_lightbox_cvv_hide()
+{
+	$("#lightbox-cvv-overlay").css("display", "none");
+}
+
+function page_lightbox_tax_show()
+{
+	$("#lightbox-tax-panel").css("margin-top", ($(window).scrollTop() + 64) + "px");
+	$("#lightbox-tax-overlay").css("display", "block");
+	$("#lightbox-tax-overlay").css("width", $(document).width());
+	$("#lightbox-tax-overlay").css("height", $(document).height());
+}
+
+function page_lightbox_tax_hide()
+{
+	$("#lightbox-tax-overlay").css("display", "none");
+}
+
+$(document).ready(function()
+{
+	$(window).bind('beforeunload', function()
+	{
+		return "You have not completed the registration process.";
+	});
+
+	$("#mainform").submit(function()
+	{
+		$(window).unbind("beforeunload");
+	});
+});
+</script>
+
+<!-- CVV Lightbox -->
+<div id="lightbox-cvv-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div id="lightbox-cvv-panel" style="margin:0px auto 20px auto; width:800px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+    <tr style="vertical-align:top;">
+    <td><div style="width:40px; height:40px;"></div></td>
+    <td><div class="page-title">SECURITY CODE</div></td>
+    <td style="padding-top:16px;"><a href="javascript:page_lightbox_cvv_hide()"><img src="/_images/registration/lightbox_close_icon.png" style="float:right; width:40px; height:40px;"></div></td>
+    </tr>
+    </table>
+
+    <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr style="vertical-align:top;">
+    <td><img src="/_images/registration/csc_1.gif" width=260></td>
+    <td style="padding:0px 0px 0px 20px;">
+        <p><b>Visa&reg;, Mastercard&reg;, and Discover&reg; cardholders:</b></p>
+        <p style="margin-top:2px;">Turn your card over and look at the signature box. You should see either the entire 16-digit credit card number or just the last four digits followed by a special 3-digit code. This 3-digit code is your CVV number / Card Security Code.</p>
+        </td>
+    </tr>
+    <tr style="vertical-align:top;">
+    <td style="padding:30px 0px 0px 0px;"><img src="/_images/registration/csc_2.gif" style="margin:0px auto 0px auto;"></td>
+    <td style="padding:30px 0px 0px 20px;">
+        <p><b>American Express&reg; cardholders:</b></p>
+        <p style="margin-top:2px;">Look for the 4-digit code printed on the front of your card just above and to the right of your main credit card number. Th<is 4-digit code is your Card Identification Number (CID). The CID is the four-digit code printed just above the Account Number.</p>
+        </td>
+    </tr>
+    </table>
+    </div>
+</div>
+</div>
+<!-- /CVV Lightbox -->
+
+<form method=POST id="mainform" name="mainform">
+<table border=0 cellspacing=0 cellpadding=0 style="margin:0px auto 0px auto;">
+<tr>
+<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+    <tr>
+    <td class="font2">01</td>
+    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
+    <td class="font2" style="padding-left:6px;">Welcome</td>
+    </tr>
+    </table>
+    </td>
+<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+    <tr>
+    <td class="font2">02</td>
+    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#ff528a;; border-radius:50%;"></div></td>
+    <td class="font2" style="padding-left:6px;">Accommodations</td>
+    </tr>
+    </table>
+    </td>
+<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+    <tr>
+    <td class="font2">03</td>
+    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
+    <td class="font2" style="padding-left:6px;">Early Boarding</td>
+    </tr>
+    </table>
+    </td>
+<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+    <tr>
+    <td class="font2">04</td>
+    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
+    <td class="font2" style="padding-left:6px;">Payment & Info</td>
+    </tr>
+    </table>
+    </td>
+<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+    <tr>
+    <td class="font2">05</td>
+    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
+    <td class="font2" style="padding-left:6px;">Success</td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+
+<!-- Step 2 -->
+<div style="display:block;">
+
+<!--<div style="margin:38px auto 0px auto; display:table;"><img src="/_images/registration/separator2.png"></div>-->
+
+<div class="page-title" style="margin:50px auto 0px auto;">Accommodations</div>
+
+
+<!-- Room selection -->
+<div style="margin-top:30px;">
+
+
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type160-name" class="font2" style="white-space:nowrap;">Men's Ocean View Triple</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(160)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype160-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype160-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/vSS7Y5.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">An Ocean View Shared featuring two twin beds & and upper twin bed, with a porthole window view of the ocean. You'll share this room with two other Summit attendees that have been thoughtfully curated for you. **There is No Balcony In This Room Type**</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type221-name" class="font2" style="white-space:nowrap;">Men's Balcony Triple</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right;">$3,795</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(221)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype221-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+        <td class="font2"><a id="roomtype221-select-link" href="javascript:page_roomtype_toggle_select(221)" style="color:inherit;">Select</a></td>
+    <td style="padding-left:10px;"><img id="roomtype221-select-marker" src="/_images/registration/select_off.png" width=12></td>
+        </tr>
+    </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype221-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201609/URMpuO.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Floor-to-ceiling glass doors open to a private balcony with sweeping panoramic views, featuring two lower twin beds and one upper twin bed. Thoughtfully curated to match you with other members of the community who we think you'll love, you'll share this room with two other male Summit attendees.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type167-name" class="font2" style="white-space:nowrap;">Interior Shared</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(167)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype167-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype167-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/HbDgKl.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">You'll be sharing this interior room, featuring two lower twin beds, with one other Summit attendees that have been thoughtfully curated for you. **There is No Balcony In This Room Type**</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type170-name" class="font2" style="white-space:nowrap;">Ocean View Shared</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right;">$4,250</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(170)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype170-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+        <td class="font2"><a id="roomtype170-select-link" href="javascript:page_roomtype_toggle_select(170)" style="color:inherit;">Select</a></td>
+    <td style="padding-left:10px;"><img id="roomtype170-select-marker" src="/_images/registration/select_off.png" width=12></td>
+        </tr>
+    </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype170-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/P62k8V.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">An Ocean View Shared featuring two twin beds with a porthole window view of the ocean. You'll share this room with one other Summit attendee that has been thoughtfully curated for you.  **There is No Balcony In This Room Type**</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type169-name" class="font2" style="white-space:nowrap;">Ocean Balcony Shared</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right;">$4,750</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(169)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype169-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+        <td class="font2"><a id="roomtype169-select-link" href="javascript:page_roomtype_toggle_select(169)" style="color:inherit;">Select</a></td>
+    <td style="padding-left:10px;"><img id="roomtype169-select-marker" src="/_images/registration/select_off.png" width=12></td>
+        </tr>
+    </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype169-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/wIuCmx.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Floor-to-ceiling glass doors open to a private balcony with sweeping panoramic views, featuring two twin beds and sitting area. You'll share this room with one other Summit attendee that has been thoughtfully curated for you.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type168-name" class="font2" style="white-space:nowrap;">Interior Studio Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(168)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype168-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype168-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/RxKNjK.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">The Studios feature a full-size bed, a one-way window to the corridor, separate areas for your bathroom, sink and shower, and private key access to the Studio lounge area of the ship. Please note this room type cannot have an occupancy greater than 1 person. **There is No Balcony In This Room Type**</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type159-name" class="font2" style="white-space:nowrap;">Ocean Balcony Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right;">$7,950</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(159)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype159-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+        <td class="font2"><a id="roomtype159-select-link" href="javascript:page_roomtype_toggle_select(159)" style="color:inherit;">Select</a></td>
+    <td style="padding-left:10px;"><img id="roomtype159-select-marker" src="/_images/registration/select_off.png" width=12></td>
+        </tr>
+    </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype159-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/oEVMv5.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Your own private room featuring floor-to-ceiling glass doors which open to a private balcony with sweeping panoramic views, and features a queen bed and sitting area.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type166-name" class="font2" style="white-space:nowrap;">Mini-Suite Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right;">$8,250</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(166)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype166-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+        <td class="font2"><a id="roomtype166-select-link" href="javascript:page_roomtype_toggle_select(166)" style="color:inherit;">Select</a></td>
+    <td style="padding-left:10px;"><img id="roomtype166-select-marker" src="/_images/registration/select_off.png" width=12></td>
+        </tr>
+    </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype166-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201510/oxWqXT.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Larger than the Ocean Balcony rooms, these Mini-Suites feature a king-size bed, sofa bed, and a private balcony with sweeping panoramic views.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type165-name" class="font2" style="white-space:nowrap;">Spa Suite Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(165)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype165-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype165-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/c0ORjr.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">These wellness oriented mini-suites come equipped with in-suite whirlpool tub, and oversized waterfall shower with multiple body spray jets. While also featuring a king-size bed, sofa bed, and private balcony.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type164-name" class="font2" style="white-space:nowrap;">Penthouse Suite Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(164)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype164-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype164-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/6H0R1i.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Your private quarters include a king size bed, luxury bathroom, living area with single sofa bed, dining area, and breathtaking panoramic views from your large private balcony.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type175-name" class="font2" style="white-space:nowrap;">Deluxe Penthouse Suite Solo</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(175)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype175-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype175-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/NHoorc.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">Your private quarters include a king size bed, luxury bathroom, living area with single sofa bed, dining area, and breathtaking panoramic views from your large private balcony.  This suite provides 30% more square footage compared to a Penthouse Suite.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type163-name" class="font2" style="white-space:nowrap;">Villa Suite</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(163)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype163-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype163-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/vRqkSz.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">These villas offer plenty of space and privacy. The master bedroom has a king-size bed and a luxury bath with bathtub and separate shower. The second bedroom has a double sofa bed and bathroom with shower. These suites also include a living and dining area, as well as floor-to-ceiling windows opening up to your own private balcony.</td>
+</tr>
+</table>
+</div>
+<table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
+<tr style="vertical-align:top;">
+<td style="width:100%; border-bottom:4px solid #000000; padding:14px 0px 10px 0px;"><div id="room-type162-name" class="font2" style="white-space:nowrap;">Owner's Suite</div></td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+        <div class="font2" style="width:180px; text-align:right; font-size:26px; color:#fe5189;">Sold Out</div>
+        </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-left:auto;">
+    <tr>
+    <td class="font2"><a href="javascript:page_roomtype_toggle_show(162)" style="color:inherit;">Details</a></td>
+    <td style="padding-left:10px;"><img id="roomtype162-details-marker" src="/_images/registration/details_off.png"></td>
+    </tr>
+    </table>
+    </div>
+    </td>
+<td style="border-bottom:4px solid #000000; padding:14px 0px 10px 0px;">
+    <div style="width:180px;">
+        </div>
+    </td>
+</tr>
+</table>
+
+<div id="roomtype162-desc" style="display:none; background-color:rgba(255, 255, 255, 0.5); padding:20px;">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr style="vertical-align:top;">
+<td><img src="/_uploads/201605/cyGikD.jpg" width=384></td>
+<td style="padding:14px 0px 0px 40px; font-size:16px; line-height:22px;">An elegantly designed room, featuring 572 square feet of separate living and dining area with floor-to-ceiling windows and 24-hour concierge service. The room includes a king-size bed with a luxury bathroom, and captain's view of the ocean.</td>
+</tr>
+</table>
+</div>
+
+<div style="margin-top:30px; text-align:center;">*Please note that prices are subject to increase based on remaining availability for each room type.</div>
+
+<input type=hidden id="room-product-id" name="room_type_id" value="">
+</div>
+<!-- /Room selection -->
+
+<div class="section-title" style="margin:70px auto 0px auto;">Your Registration Includes</div>
+<div style="margin-top:40px; text-align:center; font-size:20px; letter-spacing:1px;">3 days / 3 nights aboard the ship</div>
+<div style="margin:20px auto 0px auto; width:60px; border-top:4px solid #000000;"></div>
+<div style="margin-top:20px; text-align:center; font-size:20px; letter-spacing:1px;">All meals and drinks</div>
+<div style="margin:20px auto 0px auto; width:60px; border-top:4px solid #000000;"></div>
+<div style="margin-top:20px; text-align:center; font-size:20px; letter-spacing:1px;">Access to all content, performances and programming</div>
+
+<div style="margin:75px auto 0px auto; display:table;"><input type=submit name="CONTINUE" value="NEXT" style="width:225px; height:98px; border:5px solid #fe5189; padding:6px 0px 0px 12px; text-align:center; font-family:champion_htf-bantamweightRg; font-size:60px; color:#fe5189; letter-spacing:8px; background:none;" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';"></div>
+
+</div>
+<!-- /Step 2 -->
+
+<!-- Step 3 -->
+<div style="display:none;">
+
+<div class="page-title" style="margin-top:50px;">Early Boarding</div>
+
+<div style="margin:20px auto 0px auto; width:800px;">
+<div>Upgrade your ticket type to include Early Boarding registration.</div>
+<table border=0 cellspacing=0>
+<tr>
+<td style="padding:20px 0px 0px 0px;"><input type=checkbox name="product1" value="1" ></td>
+<td style="padding:20px 0px 0px 8px; font-size:18px;"><b>Early Boarding Upgrade</b> ($395.00)</td>
+</tr>
+<tr>
+<td style="padding:5px 0px 0px 0px;"></td>
+<td style="padding:5px 0px 0px 8px;">You can now upgrade your ticket type to board the ship on November 8th, the day before we set sail.  Instead of needing to book a hotel and dinner reservation in the city that night, you can head straight to the ship and start your Summit at Sea experience a day early.<br/><br/>Upgrade includes:<br/><br/>  • Early event Check-In and Boarding on Tuesday, November 8th from 4-11PM<br/>  • Early Check-in to room accommodations aboard the ship<br/>  • Ability to get on and off the ship freely through November 9th<br/>  • Dining experience on-board from 8-10PM on November 8th<br/>  • Exclusive Election Night viewing and party following dinner<br/>  • Access to Wednesday morning programming aboard the ship (yoga, wellness + recreation activities)</td>
+</tr>
+</table>
+</div>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin:50px auto 0px auto;">
+<tr>
+<td><input type=submit name="BACK" value="&nbsp;" style="width:88px; height:50px; border:0px; background:url(/_images/registration/button_back.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';"></td>
+<td style="padding-left:60px;"><input type=submit name="CONTINUE" value="NEXT" style="width:225px; height:98px; border:5px solid #fe5189; padding:6px 0px 0px 12px; text-align:center; font-family:champion_htf-bantamweightRg; font-size:60px; color:#fe5189; letter-spacing:8px; background:none;" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';"></td>
+</tr>
+</table>
+
+</div>
+<!-- /Step 3 -->
+
+<!-- Step 4 -->
+<div style="display:none;">
+
+<!--<div style="margin:38px auto 0px auto; display:table;"><img src="/_images/registration/separator2.png"></div>-->
+
+<div class="page-title" style="margin-top:50px;">Payment</div>
+
+<div style="margin-top:30px; text-align:center; font-size:20px;">Your reservation is comp'ed.</div>
+
+<!-- Credit Card Info -->
+<div id="cc-section" style="display:none;">
+
+<div style="padding:20px 0px 20px 0px; text-align:center; font-size:20px;">No payment is required at this time</div>
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin:30px auto 0px auto;">
+<tr style="vertical-align:top;">
+<td style="padding:5px 0px 0px 0px;">
+
+    <div style="padding-right:30px; display:none;">
+    <table border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td style="padding:0px 0px 0px 0px;">
+        <div><input type=text name="cc_first_name" value="" style="width:320px;" placeholder="First Name on Card"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div><input type=text name="cc_last_name" value="" style="width:320px;" placeholder="Last Name on Card"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+    <tr>
+    <td style="padding:0px 0px 0px 0px;">
+        <div><input type=text name="cc_number" value="" style="width:320px;" placeholder="Credit Card Number"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div><input type=text name="cc_exp_date" value="" style="width:150px;" placeholder="Expiration (mm/yy)"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <table border=0 cellspacing=0>
+        <tr>
+        <td><input type=text name="cc_cvv" value="" style="width:120px;" placeholder="Security Code"></td>
+        <td class="font2" style="padding-left:5px;"><a href="javascript:page_lightbox_cvv_show()">?</a></td>
+        </table>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+    <tr style="vertical-align:top;">
+    <td style="padding:0px 0px 0px 0px;">
+        <div><input type=text name="cc_address" value="" style="width:320px;" placeholder="Billing Address"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div><input type=text name="cc_city" value="" style="width:320px;" placeholder="City"></div>
+        </td>
+    </tr>
+    </table>
+    <table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
+    <tr style="vertical-align:top;">
+    <td style="padding:0px 0px 0px 0px;">
+        <div><input type=text name="cc_state" value="" style="width:150px;" placeholder="State"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div><input type=text name="cc_postal_code" value="" style="width:150px;" placeholder="Zip Code"></div>
+        </td>
+    <td style="padding:0px 0px 0px 20px;">
+        <div><select name="cc_country" style="width:320px;">
+            <option value="">Country</option>
+             <option value="US">United States</option>
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BB">Barbados</option>
+<option value="BD">Bangladesh</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BW">Botswana</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CD">Congo, Democratic Republic</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="CI">Cote D'Ivoire (Ivory Coast)</option>
+<option value="HR">Croatia (Hrvatska)</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="CS">Czechoslovakia (former)</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TP">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="FX">France, Metropolitan</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="MK">F.Y.R.O.M. (Macedonia)</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GB">Great Britain (UK)</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard and McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KP">Korea (North)</option>
+<option value="KR">Korea (South)</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LI">Liechtenstein</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LS">Lesotho</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MC">Monaco</option>
+<option value="MD">Moldova</option>
+<option value="MA">Morocco</option>
+<option value="MN">Mongolia</option>
+<option value="MS">Montserrat</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NT">Neutral Zone</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand (Aotearoa)</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="GS">S. Georgia and S. Sandwich Isls.</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="VC">Saint Vincent & the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SI">Slovenia</option>
+<option value="SK">Slovak Republic</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SH">St. Helena</option>
+<option value="PM">St. Pierre and Miquelon</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard & Jan Mayen Islands</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="UK">United Kingdom</option>
+<option value="UM">US Minor Outlying Islands</option>
+<option value="UY">Uruguay</option>
+<option value="SU">USSR (former)</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City State (Holy See)</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Viet Nam</option>
+<option value="VG">Virgin Islands (British)</option>
+<option value="VI">Virgin Islands (U.S.)</option>
+<option value="WF">Wallis and Futuna Islands</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="YU">Yugoslavia</option>
+<option value="ZM">Zambia</option>
+<option value="ZR">Zaire</option>
+<option value="ZW">Zimbabwe</option>
+            </select></div>
+        </td>
+    </tr>
+    </table>
+
+    <table border=0 cellspacing=0 cellpadding=0 style="margin-top:20px;">
+    <tr>
+    <td><input type=checkbox name="save_cc" value="1" checked></td>
+    <td class="font2" style="padding:0px 0px 0px 6px;">Save Credit Card Info</td>
+    </tr>
+    </table>
+    </div>
+
+    </td>
+<td>
+    <table border=0 cellspacing=0 cellpadding=0 style="width:300px;">
+            <tr style="vertical-align:bottom;">
+    <td class="font2" style="border-bottom:4px solid #fe5189; padding:40px 0px 5px 0px; font-size:36px;">Early Boarding</td>
+    <td class="font2" style="border-bottom:4px solid #fe5189; padding:40px 0px 5px 0px; text-align:right;"><div style="padding-bottom:5px;"><a href="javascript:page_step_goto('3')">Change</a></div></td>
+    </tr>
+        <tr>
+    <td class="font2" style="padding:15px 0px 0px 0px;">None selected</td>
+    <td class="font2" style="padding:15px 0px 0px 0px; text-align:right;"></td>
+    </tr>
+        <tr style="vertical-align:bottom;">
+    <td colspan=2 class="font2" style="border-bottom:4px solid #fe5189; padding:40px 0px 5px 0px; font-size:36px;">Totals</td>
+    <td></td>
+    </tr>
+        <tr>
+    <td class="font2" style="padding:15px 0px 0px 0px;">Total</td>
+    <td class="font2" style="padding:15px 0px 0px 0px; text-align:right;">$0.00</td>
+    </tr>
+        </table>
+
+    <table border=0 cellspacing=0 cellpadding=0 style="margin:30px auto 0px auto; display:none;">
+    <tr>
+    <td class="font2">COUPON CODE:</td>
+    <td style="padding-left:15px;"><input type=text name="discount_code" value="" style="width:120px;"></td>
+    <td class="font2" style="padding-left:15px;"><a href="javascript:page_coupon_apply()">APPLY</a></td>
+    </tr>
+    </table>
+
+    </td>
+</tr>
+</table>
+
+</div>
+<!-- /Credit Card Info -->
+
+<table border=0 cellspacing=0 cellpadding=0 style="margin:51px auto 0px auto;">
+<tr>
+<td><input type=submit name="BACK" value="&nbsp;" style="width:88px; height:50px; border:0px; background:url(/_images/registration/button_back.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';"></td>
+<td style="padding-left:57px;"><input type=submit name="CONTINUE" value="&nbsp;" style="width:225px; height:98px; border:0px; background:url(/_images/_common/buttons/submit.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';">
+</tr>
+<tr>
+<td></td>
+<td class="font2" style="padding:35px 0px 0px 57px; text-align:center;"><a href="javascript:lightbox_refundpolicy_show()">REFUND POLICY</a></td>
+</tr>
+</table>
+
+</div>
+<!-- /Step 4 -->
+
+<input type=hidden id="step" name="step" value="2">
+</form>
+
+</div>
+
+<div style="margin:120px 0px 10px 0px; text-align:center;">2016 &copy; The Summit Series, LLC &nbsp;&bull;&nbsp; <a href="/terms/">Terms of Service</a></div>
+
+
+<!-- Start of ReTargeter Tag -->
+<script type="text/javascript" src="https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/json3.js"></script>
+<script type="text/javascript">
+    if( typeof _rt_cgi == "undefined" ){
+    var _rt_cgi = 1248;
+    var _rt_base_url = "https://lt.retargeter.com/";
+    var _rt_js_base_url = "https://s3.amazonaws.com/V3-Assets/prod/client_super_tag/";
+    var _rt_init_src = _rt_js_base_url+"init_super_tag.js";
+    var _rt_refresh_st = false;
+    var _rt_record = function(params){if(typeof document.getElementsByTagName("_rt_data")[0]=="undefined"){setTimeout(function(){_rt_record(params);},25);}};
+    (function() {var scr = document.createElement("script");scr.src = _rt_init_src;document.getElementsByTagName("head")[0].appendChild(scr);})();}
+    </script>
+<!-- End of ReTargeter Tag -->
+</body>
+</html>
