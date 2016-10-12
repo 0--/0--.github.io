@@ -1,148 +1,7 @@
  @media screen {
-    body {
-        color: #080928 !important;
-        background: #FFF !important;
-        font-family: 'Helvetica Neue Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-        font-weight: lighter !important;
-    }
-
-    #mainform {
-        display: block;
-        margin: 0 auto;
-        max-width: 1000px;
-    }
-
-    #mainform td,
-    input,
-    textarea,
-    select {
-      font-family: 'Helvetica Neue Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-    }
-
-    input[type=text],
-    label,
-    select,
-    textarea,
-    .form-element {
-      font-weight: normal;
-      border-bottom: 1px solid #080928;
-    }
-
-    input[type=text]:focus,
-    textarea:focus,
-    select:focus,
-    .form-element:focus {
-      font-weight: normal;
-      outline: 0 !important;
-      border-bottom: 2px solid #44d7d8 !important;
-      border-color: #44d7d8 !important;
-    }
-
-    input::-ms-input-placeholder,
-    textarea::-ms-input-placeholder,
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder,
-    input::-moz-placeholder,
-    textarea::-moz-placeholder,
-    input::placeholder,
-    textarea::placeholder {
-        font-weight: lighter !important;
-    }
-
-    input[type=text] {
-        color: #080928;
-    }
-
-    input[type=checkbox] {
-      margin-left: 6px;
-      display: inline-block;
-    }
-
-    button[name=CONTINUE] {
-      margin: 0 auto;
-      display: block;
-    }
-    button.btn[name=CONTINUE] {
-      padding: 12px 24px !important;
-    }
-    button.btn[name=CONTINUE] > .btn-label {
-      font-size: 24px !important;
-    }
-
-    textarea {
-        padding: 6px 12px !important;
-    }
-
-    a {
-      color: #32c9f0 !important;
-      line-height: 1.3em;
-      font-weight: normal !important;
-    }
 
     .site-sections > tbody > tr > td {
         white-space: nowrap;
-    }
-
-    .page-header {
-      display: block;
-      background: transparent url(/_css/images/bg-header.jpg) no-repeat bottom right;
-      background-size: cover;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .page-title,
-    .section-title {
-      text-transform: small-caps;
-      font-family: 'Helvetica Neue Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-      padding-bottom: 18px !important;
-      border-bottom: 4px solid #000 !important;
-    }
-
-    .page-title {
-      font-weight: bold;
-      border-bottom-color: #b4cfec !important;
-      color: #FFF;
-    }
-
-    .section-title {
-        font-weight: bold;
-        padding-left: 18px;
-        padding-right: 18px;
-        margin: 48px auto !important;
-    }
-
-    .btn {
-        font-family: 'Helvetica Neue Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-        font-weight: bold;
-        background-color: #080928 !important;
-        display: inline-block;
-        padding: 8px 16px;
-        text-transform: uppercase;
-        color: #FFF !important;
-        border-radius: 1000px;
-        font-size: 11px;
-        text-decoration: none;
-        width: auto !important;
-        height: auto !important;
-    }
-    .btn:hover {
-        background-image: url(/_css/images/bg-header.jpg) !important;
-        background-position: center !important;
-        background-size: cover !important;
-    }
-    .btn > .btn-label {
-      text-decoration: none !important;
-    }
-    .btn.btn-trans {
-      color: #FFF !important;
-      background: transparent none !important;
-      border: 1px solid #FFF !important;
-      margin: 16px 24px !important;
-    }
-    .btn.btn-trans:hover {
-      color: #080928 !important;
-      border-color: #080928 !important;
     }
 
 
@@ -223,60 +82,48 @@
     }
 }
 
-  @media screen and (max-width: 899px) {
-    #mainform {
-      display: block;
-      width: auto;
-      max-width: 672px;
-      padding: 24px;
-    }
-    #mainform > table > tbody > tr > td {
-      width: 100% !important;
-      display: block !important;
-      margin-bottom: 36px;
-    }
+  // @media screen and (max-width: 999px) {
+  //   .site-sections > tbody > tr > td {
+  //     width: 100% !important;
+  //     display: block !important;
+  //     margin-bottom: 6px;
+  //     font-size: .67em !important;
+  //   }
 
-    .site-sections > tbody > tr > td {
-      width: 100% !important;
-      display: block !important;
-      margin-bottom: 6px;
-      font-size: .67em !important;
-    }
+  //   .site-sections table {
+  //     height: auto !important;
+  //   }
 
-    .site-sections table {
-      height: auto !important;
-    }
+  //   #mainform table {
+  //     margin: 0 !important;
+  //     display: block !important;
+  //     width: 100% !important;
+  //   }
+  //   #mainform tbody {
+  //     display: inline-block !important;
+  //     width: 100% !important;
+  //   }
+  //   #mainform tr {
+  //     display: inline !important;
+  //     padding: 0 !important;
+  //     margin: 0 !important;
+  //   }
+  //   #mainform td  {
+  //     padding: 0 !important;
+  //   }
 
-    #mainform table {
-      margin: 0 !important;
-      display: block !important;
-      width: 100% !important;
-    }
-    #mainform tbody {
-      display: inline-block !important;
-      width: 100% !important;
-    }
-    #mainform tr {
-      display: inline !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-    #mainform td  {
-      padding: 0 !important;
-    }
+  //   input[type=checkbox] {
+  //     margin-left: 6px;
+  //     margin-right: 6px;
+  //     display: inline-block;
+  //   }
 
-    input[type=checkbox] {
-      margin-left: 6px;
-      margin-right: 6px;
-      display: inline-block;
-    }
-
-    select,
-    textarea,
-    input[type=text],
-    .form-element {
-      height: 50px;
-      display: block !important;
-      width: 100% !important;
-    }
-  }
+  //   select,
+  //   textarea,
+  //   input[type=text],
+  //   .form-element {
+  //     height: 50px;
+  //     display: block !important;
+  //     width: 100% !important;
+  //   }
+  // }

@@ -11,6 +11,7 @@
 <meta property="og:title" content="Summit at Sea 2016" />
 <meta property="og:image" content="http://sas.summit.co/_images/_facebook/og_logo.jpg" />
 <meta property="og:description" content="Summit at Sea: Gathering today's leaders in business and culture." />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <script LANGUAGE="JavaScript" src="/_js/jquery-1.4.4.min.js"></script>
 <script>
@@ -148,14 +149,14 @@ function lightbox_refundpolicy_hide()
 }
 </script>
 
-<!-- <link rel="stylesheet" href="/_css/mllnnl.css"></link> -->
+<link rel="stylesheet" href="/_css/mllnnl.css"></link>
 <link rel="stylesheet" href="/_css/responsive.css"></link>
 </head>
-<body class="register2-profile-update" style="background:url(/_images/_common/bg3a.jpg) center -0px no-repeat; background-attachment:fixed;">
+<body style="background:url(/_images/_common/bg3a.jpg) center -0px no-repeat; background-attachment:fixed;">
 
 <!-- Contact Us Lightbox -->
-<div id="lightbox-contact-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(152, 208, 231, 0.7); display:none;">
-<div id="lightbox-contact-panel" style="margin:0px auto 20px auto; width:1000px;">
+<div class="lightbox" id="lightbox-contact-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(152, 208, 231, 0.7); display:none;">
+<div class="lightbox" id="lightbox-contact-panel" style="margin:0px auto 20px auto; width: 100%; max-width: 1000px;">
 
 <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
 <tr style="vertical-align:top;">
@@ -168,21 +169,21 @@ function lightbox_refundpolicy_hide()
 <table border=0 cellspacing=0 cellpadding=0 style="margin-top:10px;">
 <tr style="vertical-align:top;">
 <td>
-    <div id="lightbox-contact-general-tab-on" style="width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px;">GENERAL INQUIRIES</div>
-    <div id="lightbox-contact-general-tab-off" style="width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px; display:none;"><a href="javascript:lightbox_contact_select('general')" style="color:inherit; text-decoration:none;">GENERAL INQUIRIES</a></div>
-    <div id="lightbox-contact-nominate-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">NOMINATE AN ATTENDEE</div>
-    <div id="lightbox-contact-nominate-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('nominate')" style="color:inherit; text-decoration:none;">NOMINATE AN ATTENDEE</a></div>
-    <div id="lightbox-contact-sponsorship-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">SPONSORSHIP</div>
-    <div id="lightbox-contact-sponsorship-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('sponsorship')" style="color:inherit; text-decoration:none;">SPONSORSHIP</a></div>
-    <div id="lightbox-contact-press-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">PRESS & MEDIA</div>
-    <div id="lightbox-contact-press-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('press')" style="color:inherit; text-decoration:none;">PRESS & MEDIA</a></div>
+    <div class="lightbox" id="lightbox-contact-general-tab-on" style="width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px;">GENERAL INQUIRIES</div>
+    <div class="lightbox" id="lightbox-contact-general-tab-off" style="width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px; display:none;"><a href="javascript:lightbox_contact_select('general')" style="color:inherit; text-decoration:none;">GENERAL INQUIRIES</a></div>
+    <div class="lightbox" id="lightbox-contact-nominate-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">NOMINATE AN ATTENDEE</div>
+    <div class="lightbox" id="lightbox-contact-nominate-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('nominate')" style="color:inherit; text-decoration:none;">NOMINATE AN ATTENDEE</a></div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">SPONSORSHIP</div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('sponsorship')" style="color:inherit; text-decoration:none;">SPONSORSHIP</a></div>
+    <div class="lightbox" id="lightbox-contact-press-tab-on" style="margin-top:20px; width:251px; border-bottom:4px solid #fe5189; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; color:#fe5189; letter-spacing:1px; display:none;">PRESS & MEDIA</div>
+    <div class="lightbox" id="lightbox-contact-press-tab-off" style="margin-top:20px; width:232px; border-bottom:4px solid #000000; padding-bottom:1px; font-family:champion_htf-bantamweightRg; font-size:25px; letter-spacing:1px;"><a href="javascript:lightbox_contact_select('press')" style="color:inherit; text-decoration:none;">PRESS & MEDIA</a></div>
     </td>
 <td style="width:100%;">
-    <form method=POST id="lightbox-contact-form">
+    <form method=POST class="lightbox" id="lightbox-contact-form">
     <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
-    <div id="lightbox-contact-general-instructions" style="text-align:center; font-size:20px; letter-spacing:1px;">For more information about Summit.</div>
-    <div id="lightbox-contact-sponsorship-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">For more information about strategic ways to partner.</div>
-    <div id="lightbox-contact-press-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">Interested in Covering Summit at Sea?<br>Please fill out this form.</div>
+    <div class="lightbox" id="lightbox-contact-general-instructions" style="text-align:center; font-size:20px; letter-spacing:1px;">For more information about Summit.</div>
+    <div class="lightbox" id="lightbox-contact-sponsorship-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">For more information about strategic ways to partner.</div>
+    <div class="lightbox" id="lightbox-contact-press-instructions" style="text-align:center; font-size:20px; letter-spacing:1px; display:none;">Interested in Covering Summit at Sea?<br>Please fill out this form.</div>
 
     <div style="margin:40px auto 0px auto; display:table;">
     <table border=0 cellspacing=0 cellpadding=0>
@@ -216,10 +217,10 @@ function lightbox_refundpolicy_hide()
     </div>
     </div>
     <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_contact_submit('')"><img src="/_images/contact/button_submit.png"></a></div>
-    <input type=hidden id="lightbox-contact-type" name="contact_type" value="general">
+    <input type=hidden class="lightbox" id="lightbox-contact-type" name="contact_type" value="general">
     </form>
 
-    <form method=POST id="lightbox-contact-nominate-form" style="display:none;">
+    <form method=POST class="lightbox" id="lightbox-contact-nominate-form" style="display:none;">
     <div style="border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
     <div style="margin:0px auto 0px auto; display:table;">
     <table border=0 cellspacing=0 cellpadding=0>
@@ -299,8 +300,8 @@ function lightbox_refundpolicy_hide()
 <!-- /Contact Us Lightbox -->
 
 <!-- Change Email Lightbox -->
-<div id="lightbox-changeemail-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
-<div id="lightbox-changeemail-panel" style="margin:0px auto 20px auto; width:800px;">
+<div class="lightbox" id="lightbox-changeemail-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div class="lightbox" id="lightbox-changeemail-panel" style="margin:0px auto 20px auto; width:800px;">
 
 <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
 <tr style="vertical-align:top;">
@@ -310,7 +311,7 @@ function lightbox_refundpolicy_hide()
 </tr>
 </table>
 
-<form method=POST id="lightbox-changeemail-form" onSubmit="return false;">
+<form method=POST class="lightbox" id="lightbox-changeemail-form" onSubmit="return false;">
     <div style="margin:10px auto 0px auto; border:4px solid #fe5189; background-color:#ffffff; padding:30px 30px 30px 30px;">
 
     <div style="text-align:center; font-size:20px; letter-spacing:1px;">Please let us know what you'd like to change your email address to:</div>
@@ -322,15 +323,15 @@ function lightbox_refundpolicy_hide()
 
     </div>
     <div style="margin:60px auto 0px auto; display:table;"><a href="javascript:lightbox_changeemail_submit()"><img src="/_images/changeemail/button_submit.png"></a></div>
-    <input type=hidden name="user" id="lightbox-changeemail-form-email" value="">
+    <input type=hidden name="user" class="lightbox" id="lightbox-changeemail-form-email" value="">
 </form>
 </div>
 </div>
 <!-- /Change Email Lightbox -->
 
 <!-- Refund Lightbox -->
-<div id="lightbox-refundpolicy-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
-<div id="lightbox-refundpolicy-panel" style="margin:0px auto 20px auto; width:800px;">
+<div class="lightbox" id="lightbox-refundpolicy-overlay" style="position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background-color:rgba(157, 247, 255, 0.9); display:none;">
+<div class="lightbox" id="lightbox-refundpolicy-panel" style="margin:0px auto 20px auto; width:800px;">
     <table border=0 cellspacing=0 cellpadding=0 style="width:100%;">
     <tr style="vertical-align:top;">
     <td><div style="width:40px; height:40px;"></div></td>
@@ -374,15 +375,6 @@ function lightbox_refundpolicy_hide()
 </div>
 <!-- /Refund PolicyLightbox -->
 
-<div style="margin:16px auto 0px auto; width:1000px;">
-<div style="text-align:right;"><a href="/user/logout.htm" class="hover-underline" style="color:#ff4989;">LOG OUT</a></div>
-</div>
-
-<div style="margin:0px auto 0px auto; width:1000px;">
-<div style="margin:20px auto 30px auto; display:table;"><a href="/"><img src="/_images/_common/title3a.png"></a></div>
-</div>
-
-<div style="margin:0px auto 0px auto; width:1000px;">
 <script>
 function page_industry_select()
 {
@@ -656,47 +648,64 @@ $(document).ready(function()
 });
 </script>
 
+<header class="page-header">
+
+    <div class="logout" style="text-align:right;">
+        <a href="/user/logout.htm" class="btn btn-trans" style="color:#ff4989;">LOG OUT</a>
+    </div>
+
+    <div style="margin:0px auto 0px auto; width: 100%; max-width: 1000px;">
+        <div style="margin:20px auto 30px auto; display:table;">
+            <a class="logo" href="/">
+                <img src="/_images/_common/title2017.png"></a>
+            </div>
+    </div>
+
+    <div style="margin:0px auto 0px auto; width: 100%; max-width: 1000px;">
+
+    <table class="site-sections" border=0 cellspacing=0 cellpadding=0 style="margin:0px auto 0px auto;">
+    <tr>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">01</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Welcome</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">02</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Accommodations</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">03</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Payment &amp; Info</td>
+        </tr>
+        </table>
+        </td>
+    <td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
+        <tr>
+        <td class="font2">04</td>
+        <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#080928; border-radius:50%;"></div></td>
+        <td class="font2" style="padding-left:6px;">Success</td>
+        </tr>
+        </table>
+        </td>
+    </tr>
+    </table>
+
+    <!--<div style="margin:41px auto 0px auto; display:table;"><img src="/_images/registration/separator3.png"></div>-->
+
+    <div class="page-title" style="margin-top:50px;">Profile Info</div>
+</header>
+
 <form method=POST id="mainform" enctype="multipart/form-data" action="/registration/register2.htm">
-<table border=0 cellspacing=0 cellpadding=0 style="margin:0px auto 0px auto;">
-<tr>
-<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
-    <tr>
-    <td class="font2">01</td>
-    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
-    <td class="font2" style="padding-left:6px;">Welcome</td>
-    </tr>
-    </table>
-    </td>
-<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
-    <tr>
-    <td class="font2">02</td>
-    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
-    <td class="font2" style="padding-left:6px;">Accommodations</td>
-    </tr>
-    </table>
-    </td>
-<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
-    <tr>
-    <td class="font2">03</td>
-    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
-    <td class="font2" style="padding-left:6px;">Payment & Info</td>
-    </tr>
-    </table>
-    </td>
-<td><table border=0 cellspacing=0 cellpadding=0 style="height:56px;  padding:0px 20px 0px 20px;">
-    <tr>
-    <td class="font2">04</td>
-    <td style="padding:0px 0px 3px 6px;"><div style="width:15px; height:15px; background-color:#000000; border-radius:50%;"></div></td>
-    <td class="font2" style="padding-left:6px;">Success</td>
-    </tr>
-    </table>
-    </td>
-</tr>
-</table>
-
-<!--<div style="margin:41px auto 0px auto; display:table;"><img src="/_images/registration/separator3.png"></div>-->
-
-<div class="page-title" style="margin-top:50px;">Profile Info</div>
 
 <div style="margin:20px auto 0px auto; font-size:20px; text-align:center; line-height:30px;">Thank you.  Your purchase has been made. To complete your<br>registration, please fill out your profile information below.</div>
 
@@ -732,7 +741,7 @@ $(document).ready(function()
 <td style="padding:0px 0px 0px 20px;">
     <table boder=0 cellspacing=0 cellpadding=0 style="width:320px; height:50px;">
     <tr>
-    <td><table border=0 cellspacing=0 cellpadding=0>
+    <td class="form-element"><table border=0 cellspacing=0 cellpadding=0>
         <tr>
         <td><input type=checkbox name="company_nonprofit_flag" value="1" ></td>
         <td style="padding:0px 0px 0px 8px;">Non-Profit Company</td>
@@ -748,7 +757,7 @@ $(document).ready(function()
 <td style="padding:0px 0px 0px 0px;">
     <table border=0 cellspacing=0 cellpadding=0 style="height:50px; width:320px;">
     <tr>
-    <td><table border=0 cellspacing=0 cellpadding=0 style="height:50px; width:320px;">
+    <td ><table class="form-element" border=0 cellspacing=0 cellpadding=0 style="height:50px; width:320px;">
         <tr>
         <td>Headshot</td>
         <td style="padding-left:8px;"><input type=file name="profile_pic" value="" size=18 style="width:210px;"></td>
@@ -763,33 +772,33 @@ $(document).ready(function()
     <div><select id="industry" name="industry" style="width:320px;" onChange="page_industry_select()">
          <option value="">Industry</option>
          <option value="1">Web-Based Technology</option>
-<option value="2">Information Technology (IT)</option>
-<option value="3">Advertising, Branding and Marketing</option>
-<option value="4">Art and Design</option>
-<option value="5">Business/Professional Services</option>
-<option value="6">Consumer Packaged Goods</option>
-<option value="7">Consumer Products</option>
-<option value="8">Education // Sciences</option>
-<option value="9">Energy / Environment</option>
-<option value="10">Engineering</option>
-<option value="11">Event Production and Services</option>
-<option value="12">Financial Services</option>
-<option value="13">Fitness and Recreation</option>
-<option value="14">Food/Beverage</option>
-<option value="15">Gaming</option>
-<option value="16">Government/Defense</option>
-<option value="17">Health Wellness and Spiritual</option>
-<option value="18">Hospitality and Travel/Leisure</option>
-<option value="19">Law/Legal Services</option>
-<option value="20">Manufacturing, Trade and Natural Resources</option>
-<option value="21">Media</option>
-<option value="22">Medical</option>
-<option value="23">Mobile</option>
-<option value="24">Music and Entertainment</option>
-<option value="25">Not For Profit</option>
-<option value="26">Real Estate/Construction</option>
-<option value="27">Shipping and Transportation</option>
-<option value="99">Other</option>
+        <option value="2">Information Technology (IT)</option>
+        <option value="3">Advertising, Branding and Marketing</option>
+        <option value="4">Art and Design</option>
+        <option value="5">Business/Professional Services</option>
+        <option value="6">Consumer Packaged Goods</option>
+        <option value="7">Consumer Products</option>
+        <option value="8">Education // Sciences</option>
+        <option value="9">Energy / Environment</option>
+        <option value="10">Engineering</option>
+        <option value="11">Event Production and Services</option>
+        <option value="12">Financial Services</option>
+        <option value="13">Fitness and Recreation</option>
+        <option value="14">Food/Beverage</option>
+        <option value="15">Gaming</option>
+        <option value="16">Government/Defense</option>
+        <option value="17">Health Wellness and Spiritual</option>
+        <option value="18">Hospitality and Travel/Leisure</option>
+        <option value="19">Law/Legal Services</option>
+        <option value="20">Manufacturing, Trade and Natural Resources</option>
+        <option value="21">Media</option>
+        <option value="22">Medical</option>
+        <option value="23">Mobile</option>
+        <option value="24">Music and Entertainment</option>
+        <option value="25">Not For Profit</option>
+        <option value="26">Real Estate/Construction</option>
+        <option value="27">Shipping and Transportation</option>
+        <option value="99">Other</option>
          </select></div>
     </td>
 <td style="padding:0px 0px 0px 20px;">
@@ -818,10 +827,10 @@ $(document).ready(function()
 </table>
 <table border=0 cellspacing=0 cellpadding=0 style="margin:25px 0px 0px 0px;">
 <tr>
-<td style="padding:0px 0px 0px 0px;">
+<td class="form-element" style="padding:0px 0px 0px 0px;">
     <table border=0 cellspacing=0 style="width:320px; height:50px;">
     <tr>
-    <td style="font-family:Times New Roman; font-size:16px;">blake3test@summit.co &nbsp;&nbsp;&nbsp; <a href="javascript:lightbox_changeemail_show('30654')">Change Email</a></td>
+    <td style="font-family:Times New Roman; font-size:16px;">blake3test@summit.co &nbsp;&nbsp;&nbsp; <a class="btn" href="javascript:lightbox_changeemail_show('30654')">Change Email</a></td>
     </tr>
     </table>
     </td>
@@ -904,45 +913,45 @@ $(document).ready(function()
     <div><select name="shoe_size" style="width:320px;">
          <option value="">Shoe Size</option>
          <option value="1030">3</option>
-<option value="1035">3-1/2</option>
-<option value="1040">4</option>
-<option value="1045">4-1/2</option>
-<option value="1050">5</option>
-<option value="1055">5-1/2</option>
-<option value="1060">6</option>
-<option value="1065">6-1/2</option>
-<option value="1070">7</option>
-<option value="1075">7-1/2</option>
-<option value="1080">8</option>
-<option value="1085">8-1/2</option>
-<option value="1090">9</option>
-<option value="1095">9-1/2</option>
-<option value="1100">10</option>
-<option value="1105">10-1/2</option>
-<option value="1110">11</option>
-<option value="1115">11-1/2</option>
-<option value="1120">12</option>
-<option value="1125">12-1/2</option>
-<option value="1130">13</option>
-<option value="1135">13-1/2</option>
-<option value="1140">14</option>
-<option value="1145">14-1/2</option>
-<option value="1150">15</option>
+        <option value="1035">3-1/2</option>
+        <option value="1040">4</option>
+        <option value="1045">4-1/2</option>
+        <option value="1050">5</option>
+        <option value="1055">5-1/2</option>
+        <option value="1060">6</option>
+        <option value="1065">6-1/2</option>
+        <option value="1070">7</option>
+        <option value="1075">7-1/2</option>
+        <option value="1080">8</option>
+        <option value="1085">8-1/2</option>
+        <option value="1090">9</option>
+        <option value="1095">9-1/2</option>
+        <option value="1100">10</option>
+        <option value="1105">10-1/2</option>
+        <option value="1110">11</option>
+        <option value="1115">11-1/2</option>
+        <option value="1120">12</option>
+        <option value="1125">12-1/2</option>
+        <option value="1130">13</option>
+        <option value="1135">13-1/2</option>
+        <option value="1140">14</option>
+        <option value="1145">14-1/2</option>
+        <option value="1150">15</option>
          </select></div>
     </td>
 <td style="padding:0px 0px 0px 20px;">
     <div><select name="shirt_size" style="width:320px;">
          <option value="">Shirt Size</option>
          <option value="101">Men's Small</option>
-<option value="102">Men's Medium</option>
-<option value="103">Men's Large</option>
-<option value="104">Men's X-Large</option>
-<option value="105">Men's 2XL</option>
-<option value="201">Women's X-Small</option>
-<option value="205">Women's Small</option>
-<option value="202">Women's Medium</option>
-<option value="203">Women's Large</option>
-<option value="204">Women's X-Large</option>
+        <option value="102">Men's Medium</option>
+        <option value="103">Men's Large</option>
+        <option value="104">Men's X-Large</option>
+        <option value="105">Men's 2XL</option>
+        <option value="201">Women's X-Small</option>
+        <option value="205">Women's Small</option>
+        <option value="202">Women's Medium</option>
+        <option value="203">Women's Large</option>
+        <option value="204">Women's X-Large</option>
          </select></div>
     </td>
 </tr>
@@ -952,7 +961,7 @@ $(document).ready(function()
 <td style="padding:0px 0px 0px 0px;">
     <table boder=0 cellspacing=0 cellpadding=0 style="width:320px; height:50px;">
     <tr>
-    <td>
+    <td class="form-element">
         <table border=0 cellspacing=0 cellpadding=0>
         <tr>
         <td style="border:0px; padding:0px 0px 0px 0px; background:none;"><input type=checkbox name="assistant_flag" value="1" ></td>
@@ -971,9 +980,13 @@ $(document).ready(function()
 </tr>
 </table>
 
-<table class="form-actions" border=0 cellspacing=0 cellpadding=0 style="margin:60px auto 0px auto;">
+<table border=0 cellspacing=0 cellpadding=0 style="margin:60px auto 0px auto;">
 <tr>
-<td style="padding-left:57px;"><input type=submit name="CONTINUE" value="CONTINUE" style="width:225px; height:98px; border:0px; background:url(/_images/_common/buttons/submit.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';"></td>
+<td>
+    <button class="btn" type=submit name="CONTINUE" value="&nbsp;" style="width:225px; height:98px; border:0px; background:url(/_images/_common/buttons/submit.png);" onMouseOver="this.style.cursor='pointer';" onMouseOut="this.style.cursor='default';">
+    <span class="btn-label"> Continue </span>
+    </button>
+</td>
 </tr>
 </table>
 
