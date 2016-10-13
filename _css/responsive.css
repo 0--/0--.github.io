@@ -5,6 +5,7 @@
         background-size: 1000px 570px !important;
         font-family: 'Helvetica Neue Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
         font-weight: lighter !important;
+        -webkit-font-smoothing: subpixel-antialiased;
     }
 
     textarea {
@@ -578,11 +579,18 @@
 
   /* Page titles */
   .page-title {
+    margin-top: 48px !important;
+    font-size: 48px !important;
+    letter-spacing: -.5px !important;
     font-weight: bold;
     color: #FFF;
   }
   .page-title + * {
     overflow: visible !important;
+  }
+  .page-title + form {
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .form-actions td {
@@ -627,5 +635,12 @@
 
   .user-profile-personal td {
     margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .page-title {
+    margin-top: 36px !important;
+    font-size: 36px !important;
   }
 }
