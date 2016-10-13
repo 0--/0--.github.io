@@ -538,6 +538,12 @@
     margin: 0 auto;
     display: block !important;
   }
+  /* Selector hack to target room description images */
+  [id^="roomtype"] img {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
 
   /* Selector hack for CVV trigger */
   a[href="javascript:page_lightbox_cvv_show()"],
