@@ -414,7 +414,7 @@
 @media screen and (max-width: 999px) {
   body {
     min-width: 320px !important;
-    background-size: auto 750px !important;
+    background-size: auto 780px !important;
     background-position: top right !important;
   }
 
